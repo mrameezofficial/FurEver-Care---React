@@ -4,8 +4,10 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import HeroSection3 from "./assets/animationNew2";
+import HeroSection5 from "./assets/animationNew2";
 import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
+import { div } from "framer-motion/client";
+import HeroSection4 from "./assets/animationNew";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -24,7 +26,7 @@ const ProtectedRoute = ({ children, role }) => {
 
 const App = () => {
   return (
-   
+   <div>
     <AuthProvider>
       <Routes>
         <Route path="/" element={<Welcome />} />
@@ -57,9 +59,11 @@ const App = () => {
           element={<PetOwnerPetCare/>}
         />
       </Routes>
-      <HeroSection3 />
+      
     </AuthProvider>
+          <HeroSection4 />
 
+</div>
     
    
   );
