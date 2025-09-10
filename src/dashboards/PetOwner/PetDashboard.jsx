@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../../ components/Hero'
 
-const PetOwnerPetCare = () => {
+const PetDashboard = () => {
   return (
     <div>
       <Hero pageTitle="Pet Care"/>
@@ -9,4 +9,4 @@ const PetOwnerPetCare = () => {
   )
 }
 
-export default PetOwnerPetCare
+export default PetDashboard

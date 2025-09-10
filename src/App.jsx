@@ -4,8 +4,13 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
+import PetDashboard from "./dashboards/PetOwner/PetDashboard";
 import HeroSection4 from "./dashboards/LandingPage/animationNew";
+import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
+import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
+import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
+import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
+import PetDashboard from "./dashboards/PetOwner/PetDashboard";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -53,13 +58,29 @@ const App = () => {
           }
         />
         <Route 
-          path="/pet-care"
-          element={<PetOwnerPetCare/>}
+          path="/pet"
+          element={<PetDashboard/>}
+        />
+        <Route 
+          path="/feedback"
+          element={<PetOwnerFeedback/>}
+        />
+        <Route 
+          path="/vet-help"
+          element={<PetOwnerVetHelp />}
+        />
+        <Route 
+          path="/about"
+          element={<PetOwnerAbout />}
+        />
+        <Route 
+          path="/form"
+          element={<PetOwnerForm />}
         />
       </Routes>
     </AuthProvider>
 
-    <HeroSection4 />
+    
     </div>
 
   );
