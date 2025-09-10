@@ -4,13 +4,12 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import PetDashboard from "./dashboards/PetOwner/PetDashboard";
+import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
 import HeroSection4 from "./dashboards/LandingPage/animationNew";
 import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import PetDashboard from "./dashboards/PetOwner/PetDashboard";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -58,8 +57,8 @@ const App = () => {
           }
         />
         <Route 
-          path="/pet"
-          element={<PetDashboard/>}
+          path="/pet-care"
+          element={<PetOwnerPetCare/>}
         />
         <Route 
           path="/feedback"

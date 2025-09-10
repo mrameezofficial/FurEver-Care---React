@@ -1,12 +1,13 @@
 import { useAuth } from "../../context/AuthContext";
-const ShelterHome = () => {
+const PetOwnerHome = () => {
   const { name } = useAuth();
+
   return (
     <div>
-      <h2>Welcome to Shelter Dashboard</h2>
+      <h2>Welcome to Pet Owner Dashboard</h2>
       <p>Hello, {name} 👋</p>
     </div>
-  );
-};
+  )
+}
 
-export default ShelterHome;
+export default PetOwnerHome
