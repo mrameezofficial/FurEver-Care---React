@@ -4,6 +4,7 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
+import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -48,6 +49,10 @@ const App = () => {
               <VartenianHome />
             </ProtectedRoute>
           }
+        />
+        <Route 
+          path="/pet-care"
+          element={<PetOwnerPetCare/>}
         />
       </Routes>
     </AuthProvider>
