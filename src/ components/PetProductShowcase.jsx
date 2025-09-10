@@ -1,0 +1,73 @@
+import React, { useState } from 'react';
+import productData from '../data/petProducts.json';
+
+const PetProductShowcase = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+
+  const categories = ['All', 'Dog/Cat Food', 'Toys', 'Grooming Essentials', 'Bedding and Apparel', 'Health Supplements'];
+
+  const filteredProducts = productData.filter((product) => {
+    const matchesSearch =
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = categoryFilter === 'All' || product.category === categoryFilter;
+    return matchesSearch && matchesCategory;
+  });
+
+  return (
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">🛍️ Pet Product Showcase</h1>
+
+      {/* Filters */}
+      <div className="flex flex-wrap gap-4 mb-6">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setCategoryFilter(cat)}
+            className={`px-3 py-1 rounded border ${
+              categoryFilter === cat ? 'bg-blue-600 text-white' : 'bg-white'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Search */}
+      <input
+        type="text"
+        placeholder="🔍 Search products..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="w-full mb-6 px-4 py-2 border rounded"
+      />
+
+      {/* Products */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="bg-white shadow-md rounded p-4 border">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-48 w-full object-cover rounded mb-4"
+            />
+            <h3 className="text-xl font-semibold">{product.name}</h3>
+            <p className="text-sm text-gray-600 mb-1">{product.category}</p>
+            <p className="text-sm text-gray-700 mb-2">{product.description}</p>
+            <p className="text-lg font-bold text-green-700">{product.price}</p>
+            <button className="mt-3 px-4 py-1 bg-pink-600 text-white rounded hover:bg-pink-700 transition">
+              Buy Now
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {filteredProducts.length === 0 && (
+        <p className="text-gray-500 mt-8">No products found.</p>
+      )}
+    </div>
+  );
+};
+
+export default PetProductShowcase

@@ -1,0 +1,20 @@
+{
+  "dogs": {
+    "puppies": [
+      { "age": "0–3 months", "meals": "4 meals/day", "food": "Puppy formula, wet food" },
+      { "age": "4–6 months", "meals": "3 meals/day", "food": "Puppy dry food + protein" }
+    ],
+    "adults": [
+      { "age": "1–7 years", "meals": "2 meals/day", "food": "Adult dry/wet food" }
+    ]
+  },
+  "cats": {
+    "kittens": [
+      { "age": "0–4 months", "meals": "4 meals/day", "food": "Kitten formula" },
+      { "age": "5–12 months", "meals": "3 meals/day", "food": "Kitten food + fish" }
+    ],
+    "adults": [
+      { "age": "1–10 years", "meals": "2 meals/day", "food": "Adult cat food" }
+    ]
+  }
+}

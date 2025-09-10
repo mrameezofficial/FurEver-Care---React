@@ -10,6 +10,11 @@ import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
+import FeedingGuide from "./ components/FeedingGuide";
+import GroomingVideos from "./ components/GroomingVideos";
+import HealthTips from "./ components/HealthTips";
+import TrainingTips from "./ components/TrainingTips";
+import PetProductShowcase from "./ components/PetProductShowcase";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -76,6 +81,27 @@ const App = () => {
           path="/form"
           element={<PetOwnerForm />}
         />
+        <Route 
+          path="/feeding-guide" 
+          element={<FeedingGuide />} 
+        />
+        <Route 
+          path="/grooming-videos" 
+          element={<GroomingVideos />} 
+        />
+        <Route 
+          path="/health-tips" 
+          element={<HealthTips />} 
+        />
+        <Route 
+          path="/tranning-tips" 
+          element={<TrainingTips />} 
+        />
+        <Route 
+          path="/products" 
+          element={<PetProductShowcase />} 
+        />
+
       </Routes>
     </AuthProvider>
 

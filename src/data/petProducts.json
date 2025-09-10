@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Organic Dog Shampoo",
+    "description": "Gentle, natural shampoo for sensitive skin.",
+    "price": "₨950",
+    "image": "/assets/products/dog-shampoo.jpg",
+    "category": "Grooming Essentials"
+  },
+  {
+    "id": 2,
+    "name": "Interactive Cat Toy",
+    "description": "Battery-powered mouse toy that encourages play.",
+    "price": "₨1200",
+    "image": "/assets/products/cat-toy.jpg",
+    "category": "Toys"
+  },
+  {
+    "id": 3,
+    "name": "Grain-Free Puppy Food",
+    "description": "High-protein puppy kibble with real chicken.",
+    "price": "₨1850",
+    "image": "/assets/products/puppy-food.jpg",
+    "category": "Dog/Cat Food"
+  },
+  {
+    "id": 4,
+    "name": "Dog Bed & Blanket",
+    "description": "Cozy bedding for small to medium dogs.",
+    "price": "₨2300",
+    "image": "/assets/products/dog-bed.jpg",
+    "category": "Bedding and Apparel"
+  },
+  {
+    "id": 5,
+    "name": "Calcium Chew Tablets",
+    "description": "Supports joint and bone health in adult dogs.",
+    "price": "₨600",
+    "image": "/assets/products/chew-tabs.jpg",
+    "category": "Health Supplements"
+  }
+]

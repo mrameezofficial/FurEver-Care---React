@@ -1,0 +1,21 @@
+{
+  "dogs": [
+    {
+      "title": "Brushing Tips for Dogs",
+      "description": "Learn how to properly brush your dog’s coat.",
+      "videoUrl": "https://www.youtube.com/embed/abc123"
+    },
+    {
+      "title": "Dog Bathing Routine",
+      "description": "Step-by-step guide to bathing your dog.",
+      "videoUrl": "https://www.youtube.com/embed/xyz456"
+    }
+  ],
+  "cats": [
+    {
+      "title": "Grooming Long-Hair Cats",
+      "description": "Essential grooming tips for cats with long fur.",
+      "videoUrl": "https://www.youtube.com/embed/pqr789"
+    }
+  ]
+}
