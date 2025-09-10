@@ -4,6 +4,7 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
+import HeroSection3 from "./assets/animationNew2";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -22,6 +23,7 @@ const ProtectedRoute = ({ children, role }) => {
 
 const App = () => {
   return (
+   
     <AuthProvider>
       <Routes>
         <Route path="/" element={<Welcome />} />
@@ -50,7 +52,11 @@ const App = () => {
           }
         />
       </Routes>
+      <HeroSection3 />
     </AuthProvider>
+
+    
+   
   );
 };
 
