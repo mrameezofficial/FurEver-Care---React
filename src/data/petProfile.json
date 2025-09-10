@@ -1,0 +1,20 @@
+{
+  "id": "pet001",
+  "name": "Bruno",
+  "species": "Dog",
+  "breed": "Golden Retriever",
+  "age": "3 years",
+  "gender": "Male",
+  "weight": "30 kg",
+  "vaccinated": true,
+  "vaccinationDetails": [
+    { "vaccine": "Rabies", "date": "2023-03-15" },
+    { "vaccine": "Parvo", "date": "2024-01-12" }
+  ],
+  "owner": {
+    "name": "Ayesha",
+    "contact": "0321-1234567",
+    "email": "ayesha@example.com"
+  },
+  "avatarUrl": "https://example.com/pets/bruno.jpg"
+}

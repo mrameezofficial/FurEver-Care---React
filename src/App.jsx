@@ -8,6 +8,16 @@ import HeroSection5 from "./assets/animationNew2";
 import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
 import { div } from "framer-motion/client";
 import HeroSection4 from "./assets/animationNew";
+import HeroSection4 from "./dashboards/LandingPage/animationNew";
+import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
+import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
+import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
+import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
+import FeedingGuide from "./ components/FeedingGuide";
+import GroomingVideos from "./ components/GroomingVideos";
+import HealthTips from "./ components/HealthTips";
+import TrainingTips from "./ components/TrainingTips";
+import PetProductShowcase from "./ components/PetProductShowcase";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -26,7 +36,9 @@ const ProtectedRoute = ({ children, role }) => {
 
 const App = () => {
   return (
-   <div>
+
+    <div>
+
     <AuthProvider>
       <Routes>
         <Route path="/" element={<Welcome />} />
@@ -58,14 +70,50 @@ const App = () => {
           path="/pet-care"
           element={<PetOwnerPetCare/>}
         />
+        <Route 
+          path="/feedback"
+          element={<PetOwnerFeedback/>}
+        />
+        <Route 
+          path="/vet-help"
+          element={<PetOwnerVetHelp />}
+        />
+        <Route 
+          path="/about"
+          element={<PetOwnerAbout />}
+        />
+        <Route 
+          path="/form"
+          element={<PetOwnerForm />}
+        />
+        <Route 
+          path="/feeding-guide" 
+          element={<FeedingGuide />} 
+        />
+        <Route 
+          path="/grooming-videos" 
+          element={<GroomingVideos />} 
+        />
+        <Route 
+          path="/health-tips" 
+          element={<HealthTips />} 
+        />
+        <Route 
+          path="/tranning-tips" 
+          element={<TrainingTips />} 
+        />
+        <Route 
+          path="/products" 
+          element={<PetProductShowcase />} 
+        />
+
       </Routes>
       
     </AuthProvider>
-          <HeroSection4 />
 
-</div>
     
-   
+    </div>
+
   );
 };
 
