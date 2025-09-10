@@ -4,7 +4,7 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-git import HeroSection3 from "./assets/animationNew2";
+import HeroSection3 from "./assets/animationNew2";
 import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
 
 // Protected Route Component
