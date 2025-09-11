@@ -42,7 +42,7 @@ export default function HeroSection8() {
   }, [expanded, selectedRole, navigate]);
 
   return (
-    <div className="h-screen w-screen flex">
+    <div className="h-screen w-screen flex ">
       {/* Role selection buttons */}
       {roles.map((role) => (
         <motion.button
@@ -51,11 +51,11 @@ export default function HeroSection8() {
           onMouseEnter={() => setHovered(role.id)}
           onMouseLeave={() => setHovered(null)}
           onClick={() => handleRoleClick(role)} // ✅ role object pass
-          className={`${role.bg} flex items-center justify-center cursor-pointer text-2xl md:text-3xl font-bold text-white transition`}
+          className={`${role.bg} flex items-center justify-center cursor-pointer text-2xl md:text-3xl font-bold text-white transition welcome-service-col ${role.id}`}
           animate={{ flex: hovered === role.id ? 3 : 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          {role.label}
+          <h3>{role.label}</h3>
         </motion.button>
       ))}
 
@@ -63,7 +63,7 @@ export default function HeroSection8() {
       <AnimatePresence>
         {showPopup && (
           <motion.div
-            className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-40"
+            className="fixed inset-0 flex items-center isok justify-center bg-black/40 backdrop-blur-sm z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

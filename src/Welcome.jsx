@@ -28,44 +28,17 @@ const Welcome = () => {
 
   return (
     <div>
-      <h1>Welcome</h1>
-      <input
-        type="text"
-        placeholder="Name"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-
-      <div>
-        <input
-          type="radio"
-          name="category"
-          value="PetOwner"
-          onChange={(e) => setSelected(e.target.value)}
-        />
-        <label>Pet Owner</label>
-
-        <input
-          type="radio"
-          name="category"
-          value="Vartenian"
-          onChange={(e) => setSelected(e.target.value)}
-        />
-        <label>Vartenian</label>
-
-        <input
-          type="radio"
-          name="category"
-          value="Shelter"
-          onChange={(e) => setSelected(e.target.value)}
-        />
-        <label>Shelter</label>
+      <div className="welcome-logo">
+        <img src="../src/assets/furever-care-logo.png" width="150px"/>
       </div>
-
-      <button onClick={handleSubmit}>Continue</button>
+      <div className="welcome-hero">
+        <h1>Welcome To FurEver Care</h1>
+        <h3>Your Trusted Companion for All Things Pet Care</h3>
+        <h5>They Deserve Forever Love</h5>
+      </div>
       <HeroSection8 />
     </div>
   );
 };
 
-export default Welcome;
+export default Welcome
