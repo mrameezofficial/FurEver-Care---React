@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 import HeroSection8 from "./dashboards/LandingPage/HeroSection";
+import HeroSection9 from "./dashboards/LandingPage/HeroSectionnw";
 
 const Welcome = () => {
   const [selected, setSelected] = useState("");
@@ -36,7 +37,7 @@ const Welcome = () => {
         <h3>Your Trusted Companion for All Things Pet Care</h3>
         <h5>They Deserve Forever Love</h5>
       </div>
-      <HeroSection8 />
+      <HeroSection9 />
     </div>
   );
 };
