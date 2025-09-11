@@ -33,8 +33,7 @@ const Welcome = () => {
       </div>
       <div className="welcome-hero">
         <h1>Welcome To FurEver Care</h1>
-        <h3>Your Trusted Companion for All Things Pet Care</h3>
-        <h5>They Deserve Forever Love</h5>
+        <h3>Your Trusted Companion for All Things Pet Care. <br />They Deserve Forever Love</h3>
       </div>
       <HeroSection8 />
     </div>

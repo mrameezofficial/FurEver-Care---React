@@ -71,10 +71,10 @@ export default function HeroSection8() {
           >
             <motion.div
               layoutId="popupBox"
-              initial={{ borderRadius: 20 }}
+              initial={{ borderRadius: 10 }}
               animate={{ borderRadius: expanded ? 0 : 20 }}
               transition={{ layout: { duration: 0.6, ease: "easeInOut" } }}
-              className="bg-white shadow-2xl relative overflow-hidden p-8"
+              className="bg-white shadow-2xl relative overflow-hidden p-8 popup"
               style={{
                 width: expanded ? "100%" : 380,
                 height: expanded ? "100%" : "auto",

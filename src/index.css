@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* font-family: "Inter Tight", sans-serif; */
-
 *{
     margin: 0px;
     padding: 0px;
@@ -22,6 +20,11 @@
   --lgorange: #f5f1eb;
   --globeWidth: 1200px;
 }
+
+body{
+    font-family: "Inter Tight", sans-serif;
+}
+
 
 .feedback-form {
     padding: 30px;
@@ -132,23 +135,23 @@
     padding: 20px;
 }
 
-nav ul{
+.header nav ul{
     display: flex;
     gap: 50px;
 }
 
-nav ul li{
+.header nav ul li{
     list-style: none;
 }
 
-nav ul li a{
+.header nav ul li a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 18px;
 }
 
-nav ul li a:hover{
+.header nav ul li a:hover{
     background-color: rgb(247, 45, 45);
     color: white;
     padding: 20px;
@@ -156,18 +159,12 @@ nav ul li a:hover{
     transition-duration: 0.3s;
 }
 
-.button{
-    float: right;
+.button {
     background-color: rgb(247, 45, 45);
-    padding: 10px;
+    padding: 8px 15px;
     border-radius: 10px;
     color: white;
     border: none;
-}
-
-.header {
-    background-color: #fff;
-    overflow: hidden;
 }
 
 .header .col.logo {
@@ -177,4 +174,76 @@ nav ul li a:hover{
 .header .row {
     justify-content: space-between;
     align-items: center;
+}
+
+.header {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 15px 10px #00000017;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.popup {
+    padding: 25px;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup input {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.header-col {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.profile-greet {
+    font-size: 10px;
+    font-family: "Inter Tight", sans-serif;
+    color: #818181;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+}
+
+.profile-name {
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.welcome-hero {
+    max-width: 600px !important;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f1eb63;
+    padding: 20px;
+    position: absolute;
+    z-index: 999 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-radius: 0 0px 20px 20px;
+    backdrop-filter: blur(5px);
+}
+
+.welcome-logo {
+    position: absolute;
+    z-index: 9999;
+    left: 30px;
+}
+
+.welcome-hero h1 {
+    font-size: 38px !important;
+}
+
+.welcome-hero h1 {
+    font-size: 38px !important;
+    color: #132b45;
+    font-weight: 800;
 }
