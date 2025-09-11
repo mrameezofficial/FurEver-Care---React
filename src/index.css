@@ -280,3 +280,58 @@ body{
     padding: 10px 16px;
     color: #fff;
 }
+
+.pet-owner-dash-section {
+    padding: 25px;
+    background-color: antiquewhite;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.pet-owner-subtitle {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.video-col {
+    padding: 15px;
+}
+
+.pet-profile-row {
+    display: flex;
+}
+
+.pet-profile-col-1 {
+    flex-direction: column;
+    display: flex;
+    width: 33.33%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.pet-profile-col-2 {
+    width: 66.66%;
+}
+
+.pet-profile-row {
+    display: flex;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.pet-profile-info-col {
+    margin-bottom: 10px;
+}
+
+.pet-profile-info-col ul {
+    list-style: none;
+}
+
+.pet-profile-col-1 img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+}

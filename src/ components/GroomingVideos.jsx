@@ -12,7 +12,7 @@ const GroomingVideos = () => {
 
           <div className="grid md:grid-cols-2 gap-4">
             {videos.map((video, index) => (
-              <div key={index} className="border rounded-md shadow-sm p-4 bg-white">
+              <div key={index} className="border rounded-md shadow-sm p-4 bg-white video-col">
                 <h4 className="font-bold text-lg mb-1">{video.title}</h4>
                 <p className="text-sm mb-2">{video.description}</p>
                 <div className="aspect-w-16 aspect-h-9">

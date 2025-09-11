@@ -22,11 +22,11 @@ const PetOwnerHome = () => {
 
         </div>
       </div>
-      <PetProfile />
-      <FeedingGuide />
-      <GroomingVideos />
-      <HealthTips />
-      <TrainingTips />
+      <section className="pet-owner-dash-section"><PetProfile /></section>
+      <section className="pet-owner-dash-section"><FeedingGuide /></section>
+      <section className="pet-owner-dash-section"><GroomingVideos /></section>
+      <section className="pet-owner-dash-section"><HealthTips /></section>
+      <section className="pet-owner-dash-section"><TrainingTips /></section>
     </div>
 
     </div>

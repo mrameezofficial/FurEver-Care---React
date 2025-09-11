@@ -12,7 +12,7 @@ const HealthTips = () => {
 
           <div className="grid md:grid-cols-2 gap-4">
             {tips.map((tip, index) => (
-              <div key={index} className="border rounded-md p-4 bg-white shadow-sm">
+              <div key={index} className="border rounded-md p-4 bg-white shadow-sm video-col">
                 <h4 className="text-lg font-bold mb-1">{tip.title}</h4>
                 <p className="text-sm mb-2">{tip.description}</p>
 
