@@ -59,7 +59,7 @@ export default function Header() {
 
                 <li><Link to="/vet-help">Emergency & Vet Help</Link></li>
                 <li><Link to="/feedback">Feedback</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
+                <li><Link to="/contact-us">Contact Us</Link></li>
               </ul>
             </nav>
           </div>

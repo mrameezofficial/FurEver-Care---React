@@ -16,6 +16,9 @@ import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
 import { useLocation } from "react-router-dom";
 import Header from "./ components/header";
+import Footer from "./ components/Footer";
+import Contact from "./dashboards/shelter/Contact";
+import ContactUs from "./ components/ContactUs";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -97,8 +100,13 @@ const App = () => {
           path="/shelter" 
           element={<ShelterHome />} 
         />
+        <Route 
+          path="/contact-us" 
+          element={<ContactUs />} 
+        />
 
       </Routes>
+     <Footer />
       
     </AuthProvider>
 
