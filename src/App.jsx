@@ -14,11 +14,8 @@ import GroomingVideos from "./ components/GroomingVideos";
 import HealthTips from "./ components/HealthTips";
 import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
-import Header from "./ components/header";
 import { useLocation } from "react-router-dom";
-import Headernew from "./ components/Headernew";
-
-
+import Header from "./ components/header";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
