@@ -15,6 +15,8 @@ import HealthTips from "./ components/HealthTips";
 import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
 import Header from "./ components/header";
+import { useLocation } from "react-router-dom";
+
 
 
 // Protected Route Component
@@ -22,22 +24,23 @@ const ProtectedRoute = ({ children, role }) => {
   const { category } = useAuth();
 
   if (!category) {
-    return <Navigate to="/" replace />; // agar kuch select nahi kiya
+    return <Navigate to="/" replace />; 
   }
 
   if (category !== role) {
-    return <Navigate to={`/${category.toLowerCase()}`} replace />; // force redirect
+    return <Navigate to={`/${category.toLowerCase()}`} replace />;
   }
 
   return children;
 };
 
 const App = () => {
+  const location = useLocation();
   return (
 
     <div>
-    <Header />
     <AuthProvider>
+    {location.pathname !== "/" && <Header />}
       <Routes>
         <Route 
           path="/" 
