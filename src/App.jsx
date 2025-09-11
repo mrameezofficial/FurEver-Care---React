@@ -14,6 +14,8 @@ import GroomingVideos from "./ components/GroomingVideos";
 import HealthTips from "./ components/HealthTips";
 import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
+import Header from "./ components/header";
+
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -34,7 +36,7 @@ const App = () => {
   return (
 
     <div>
-
+    <Header />
     <AuthProvider>
       <Routes>
         <Route path="/" element={<Welcome />} />
@@ -92,7 +94,6 @@ const App = () => {
       
     </AuthProvider>
 
-    
     </div>
 
   );
