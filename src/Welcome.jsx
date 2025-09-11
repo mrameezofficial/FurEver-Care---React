@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
-import HeroSection9 from "./dashboards/LandingPage/HeroSectionnw";
+import HeroSection9 from "./dashboards/LandingPage/HeroSection";
 
 const Welcome = () => {
   const [selected, setSelected] = useState("");

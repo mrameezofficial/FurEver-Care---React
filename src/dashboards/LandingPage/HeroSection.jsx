@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-export default function HeroSection8() {
+export default function HeroSection9() {
   const [hovered, setHovered] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -55,7 +55,26 @@ export default function HeroSection8() {
           animate={{ flex: hovered === role.id ? 3 : 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <h3>{role.label}</h3>
+          <div className="flex flex-col items-center gap-2 services-content-wrapper">
+            <h3>{role.label}</h3>
+
+            {/* 👇 Click Me button always below headline */}
+            <AnimatePresence>
+              {hovered === role.id && (
+                <motion.button
+                  key="hoverBtn"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => handleRoleClick(role)}
+                  className="px-4 py-2 text-sm rounded bg-teal-600 text-white hover:bg-teal-700 services-btn"
+                >
+                  Explore More
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.button>
       ))}
 
