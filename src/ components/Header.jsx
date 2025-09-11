@@ -26,11 +26,11 @@ export default function Header() {
       <div className="container">
         <div className="row">
           <div className="col logo">
-            <img
+            <Link to="/"> <img
               src="../src/assets/furever-care-logo.jpg"
               alt="Logo"
               width="120px"
-            />
+            /></Link>
           </div>
 
           <div className="col navbar">
@@ -45,10 +45,6 @@ export default function Header() {
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
-          </div>
-
-          <div className="col button-header">
-            <button type="button" className="button">Adopt Here</button>
           </div>
 
           {userName && (
