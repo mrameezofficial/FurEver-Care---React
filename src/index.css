@@ -280,3 +280,40 @@ body{
     padding: 10px 16px;
     color: #fff;
 }
+
+
+
+
+/* Submenu (dropdown) */
+.header .navbar ul .submenu {
+  display: flex;
+  flex-direction: column; /* column wise */
+  position: absolute;
+  top: 100%;  /* appear below parent */
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 200px;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Submenu items */
+.header .navbar ul .submenu li {
+  padding: 10px 16px;
+  white-space: nowrap;
+  display: block;
+}
+
+.header .navbar ul .submenu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.header .navbar ul .submenu li:hover {
+  background: #f5f5f5;
+}

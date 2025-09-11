@@ -16,6 +16,7 @@ import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
 import Header from "./ components/header";
 import { useLocation } from "react-router-dom";
+import Headernew from "./ components/Headernew";
 
 
 
@@ -40,7 +41,7 @@ const App = () => {
 
     <div>
     <AuthProvider>
-    {location.pathname !== "/" && <Header />}
+    {location.pathname !== "/" && <Headernew />}
       <Routes>
         <Route 
           path="/" 

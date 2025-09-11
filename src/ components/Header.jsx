@@ -5,7 +5,7 @@ export default function Header() {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    // 👇 Get stored name when header loads
+    // Get stored name when header loads
     const storedName = localStorage.getItem("userName");
     if (storedName) {
       setUserName(storedName);
