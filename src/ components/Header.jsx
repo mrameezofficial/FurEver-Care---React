@@ -17,11 +17,11 @@ export default function Header() {
       <div className="container">
         <div className="row">
           <div className="col logo">
-            <img
+            <Link to="/"> <img
               src="../src/assets/furever-care-logo.jpg"
               alt="Logo"
               width="120px"
-            />
+            /></Link>
           </div>
 
           <div className="col navbar">
@@ -38,24 +38,14 @@ export default function Header() {
             </nav>
           </div>
 
-          <div className="col button-header">
-            <button type="button" className="button">Adopt Here</button>
-          </div>
-
           {userName && (
             <div className="col user-name">
               <span>Welcome, {userName}</span>
             </div>
           )}
-        <div className="col header-col">
-          <Link to="/" type="button" className="button">Adopt Here</Link>
-          <div className="profile-greeting">
-            <h4 className="profile-greet">Welcome!</h4>
-            <h3 className="profile-name">{name}</h3>
-          </div>
+        
         </div>
       </div>
-    </div>
     </div>
   );
 }
