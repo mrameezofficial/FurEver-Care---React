@@ -4,11 +4,7 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import HeroSection5 from "./assets/animationNew2";
 import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
-import { div } from "framer-motion/client";
-import HeroSection4 from "./assets/animationNew";
-import HeroSection4 from "./dashboards/LandingPage/animationNew";
 import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
@@ -44,28 +40,11 @@ const App = () => {
         <Route path="/" element={<Welcome />} />
         <Route
           path="/petowner"
-          element={
-            <ProtectedRoute role="PetOwner">
+          element= {
               <PetOwnerHome />
-            </ProtectedRoute>
           }
         />
-        <Route
-          path="/shelter"
-          element={
-            <ProtectedRoute role="Shelter">
-              <ShelterHome />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/vartenian"
-          element={
-            <ProtectedRoute role="Vartenian">
-              <VartenianHome />
-            </ProtectedRoute>
-          }
-        />
+      
         <Route 
           path="/pet-care"
           element={<PetOwnerPetCare/>}
@@ -106,6 +85,8 @@ const App = () => {
           path="/products" 
           element={<PetProductShowcase />} 
         />
+         <Route path="/vartenian" element={<VartenianHome />} />
+        <Route path="/shelter" element={<ShelterHome />} />
 
       </Routes>
       

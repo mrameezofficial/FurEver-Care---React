@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
-import HeroSection4 from "./dashboards/LandingPage/animationNew";
+import HeroSection8 from "./dashboards/LandingPage/HeroSection";
 
 const Welcome = () => {
   const [selected, setSelected] = useState("");
@@ -63,7 +63,7 @@ const Welcome = () => {
       </div>
 
       <button onClick={handleSubmit}>Continue</button>
-      <HeroSection4 />
+      <HeroSection8 />
     </div>
   );
 };

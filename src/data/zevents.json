@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Adoption Drive",
+    "date": "September 20, 2025",
+    "location": "City Park",
+    "description": "Join us for our pet adoption drive with many adorable pets looking for homes."
+  },
+  {
+    "id": 2,
+    "title": "Free Vaccination Camp",
+    "date": "October 5, 2025",
+    "location": "Animal Shelter Grounds",
+    "description": "Free vaccinations for adopted pets."
+  }
+]

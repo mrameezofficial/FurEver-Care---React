@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Johnson",
+    "specialization": "Small Animals",
+    "contact": "sarah.johnson@vetclinic.com | +1 (555) 123-4567",
+    "image": "/images/sarah.jpg",
+    "timeSlots": [
+      { "time": "09:00 AM - 10:00 AM", "status": "Available" },
+      { "time": "10:00 AM - 11:00 AM", "status": "Booked" },
+      { "time": "11:00 AM - 12:00 PM", "status": "Available" }
+    ],
+    "caseStudies": [
+      {
+        "title": "Canine Diabetes Management",
+        "description": "A 7-year-old Labrador retriever was diagnosed with diabetes. Treatment involved insulin therapy and a strict diet plan."
+      },
+      {
+        "title": "Feline Kidney Disease",
+        "description": "A 10-year-old cat with kidney disease was stabilized using IV fluids, specialized diets, and medication."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dr. Michael Lee",
+    "specialization": "Exotic Pets",
+    "contact": "michael.lee@vetclinic.com | +1 (555) 987-6543",
+    "image": "/images/michael.jpg",
+    "timeSlots": [
+      { "time": "01:00 PM - 02:00 PM", "status": "Available" },
+      { "time": "02:00 PM - 03:00 PM", "status": "Booked" },
+      { "time": "03:00 PM - 04:00 PM", "status": "Available" }
+    ],
+    "caseStudies": [
+      {
+        "title": "Parrot Feather Plucking",
+        "description": "A macaw presented with feather plucking due to stress. The treatment plan included enrichment and dietary changes."
+      },
+      {
+        "title": "Iguana Metabolic Bone Disease",
+        "description": "An iguana was treated for calcium deficiency with supplements and UVB exposure."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Carter",
+    "specialization": "Large Animals",
+    "contact": "emily.carter@vetclinic.com | +1 (555) 444-7890",
+    "image": "/images/emily.jpg",
+    "timeSlots": [
+      { "time": "08:00 AM - 09:00 AM", "status": "Available" },
+      { "time": "09:00 AM - 10:00 AM", "status": "Booked" },
+      { "time": "10:00 AM - 11:00 AM", "status": "Available" }
+    ],
+    "caseStudies": [
+      {
+        "title": "Equine Colic Surgery",
+        "description": "A horse underwent emergency surgery for colic and made a full recovery."
+      },
+      {
+        "title": "Dairy Cow Mastitis",
+        "description": "A dairy cow with mastitis was treated with antibiotics and improved within a week."
+      }
+    ]
+  }
+]
