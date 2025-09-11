@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
-import HeroSection8 from "./dashboards/LandingPage/HeroSection";
 import HeroSection9 from "./dashboards/LandingPage/HeroSectionnw";
 
 const Welcome = () => {

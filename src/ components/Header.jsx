@@ -42,14 +42,20 @@ export default function Header() {
             <button type="button" className="button">Adopt Here</button>
           </div>
 
-          {/*  Show logged-in user's name */}
           {userName && (
             <div className="col user-name">
-              <span>Welcome, {userName} 👋</span>
+              <span>Welcome, {userName}</span>
             </div>
           )}
+        <div className="col header-col">
+          <Link to="/" type="button" className="button">Adopt Here</Link>
+          <div className="profile-greeting">
+            <h4 className="profile-greet">Welcome!</h4>
+            <h3 className="profile-name">{name}</h3>
+          </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
