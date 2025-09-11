@@ -1,9 +1,12 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* font-family: "Inter Tight", sans-serif; */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 :root {
   font-family: "Nunito", sans-serif;
@@ -96,10 +99,82 @@
     padding: 2.5vw;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .welcome-service-col h3 {
-    max-width: 330px;
+    max-width: 300px;
     text-align: left;
     z-index: 1;
+    font-size: 30px;
+    line-height: 1.3em;
+    color: #fff;
+    font-family: "Inter Tight", sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: var(--globeWidth);
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header{
+    background-color: #F4F1EA;
+    padding: 10px;
+}
+
+.header-nav{
+    padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover{
+    background-color: rgb(247, 45, 45);
+    color: white;
+    padding: 20px;
+    border-radius:20px;
+    transition-duration: 0.3s;
+}
+
+.button{
+    float: right;
+    background-color: rgb(247, 45, 45);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+.header {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.header .col.logo {
+    margin: -10px 0;
+}
+
+.header .row {
+    justify-content: space-between;
+    align-items: center;
 }

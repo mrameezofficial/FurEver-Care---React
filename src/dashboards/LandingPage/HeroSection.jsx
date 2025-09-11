@@ -12,9 +12,9 @@ export default function HeroSection8() {
 
   // 👇 Har role ka unique path
   const roles = [
-    { id: "owner", label: "Pet Owner", bg: "bg-teal-600", path: "/petowner" },
-    { id: "vet", label: "Veterinarian", bg: "bg-blue-600", path: "/vartenian" },
-    { id: "shelter", label: "Animal Shelter / Rescue Volunteer", bg: "bg-purple-600", path: "/shelter" },
+    { id: "owner", label: "Pet Owner", path: "/petowner" },
+    { id: "vet", label: "Veterinarian", path: "/vartenian" },
+    { id: "shelter", label: "Animal Shelter / Rescue Volunteer", path: "/shelter" },
   ];
 
   // ✅ ab role object store hoga (label nahi)
@@ -51,7 +51,7 @@ export default function HeroSection8() {
           onMouseEnter={() => setHovered(role.id)}
           onMouseLeave={() => setHovered(null)}
           onClick={() => handleRoleClick(role)} // ✅ role object pass
-          className={`${role.bg} flex items-center justify-center cursor-pointer text-2xl md:text-3xl font-bold text-white transition welcome-service-col ${role.id}`}
+          className={`${role.bg}  welcome-service-col ${role.id}`}
           animate={{ flex: hovered === role.id ? 3 : 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >

@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div className="container">
+    <div className="header">
+      <div className="container">
       <div className="row">
         <div className="col logo">
-          <img src="./Assets/Image/logo.png" alt="Logo" />
+          <img src="../src/assets/furever-care-logo.jpg" alt="Logo" width="120px" />
         </div>
 
         <div className="col navbar">
@@ -26,6 +27,7 @@ export default function Header() {
           <button type="button" className="button">Adopt Here</button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
