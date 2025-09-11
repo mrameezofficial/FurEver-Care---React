@@ -37,12 +37,13 @@ const App = () => {
 
     <AuthProvider>
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        <Route 
+          path="/" 
+          element={<Welcome />} 
+        />
         <Route
           path="/petowner"
-          element= {
-              <PetOwnerHome />
-          }
+          element= {<PetOwnerHome />}
         />
       
         <Route 
@@ -85,8 +86,14 @@ const App = () => {
           path="/products" 
           element={<PetProductShowcase />} 
         />
-         <Route path="/vartenian" element={<VartenianHome />} />
-        <Route path="/shelter" element={<ShelterHome />} />
+         <Route 
+          path="/vartenian" 
+          element={<VartenianHome />} 
+        />
+        <Route 
+          path="/shelter" 
+          element={<ShelterHome />} 
+        />
 
       </Routes>
       
