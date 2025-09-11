@@ -16,8 +16,6 @@ import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
 import Header from "./ components/header";
 import { useLocation } from "react-router-dom";
-import Headernew from "./ components/Headernew";
-
 
 
 // Protected Route Component
@@ -41,7 +39,7 @@ const App = () => {
 
     <div>
     <AuthProvider>
-    {location.pathname !== "/" && <Headernew />}
+    {location.pathname !== "/" && <Header/>}
       <Routes>
         <Route 
           path="/" 
