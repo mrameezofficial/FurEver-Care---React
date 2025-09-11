@@ -135,40 +135,12 @@ body{
     padding: 20px;
 }
 
-.header nav ul{
-    display: flex;
-    gap: 50px;
-}
-
-.header nav ul li{
-    list-style: none;
-}
-
-.header nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.header nav ul li a:hover{
-    background-color: rgb(247, 45, 45);
-    color: white;
-    padding: 20px;
-    border-radius:20px;
-    transition-duration: 0.3s;
-}
-
 .button {
     background-color: rgb(247, 45, 45);
     padding: 8px 15px;
     border-radius: 10px;
     color: white;
     border: none;
-}
-
-.header .col.logo {
-    margin: -10px 0;
 }
 
 .header .row {
@@ -181,7 +153,7 @@ body{
     position: sticky;
     top: 0;
     box-shadow: 0 0 15px 10px #00000017;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 99;
 }
 
@@ -279,4 +251,59 @@ body{
     border-radius: 5px;
     padding: 10px 16px;
     color: #fff;
+}
+
+.pet-owner-dash-section {
+    padding: 25px;
+    background-color: antiquewhite;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.pet-owner-subtitle {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.video-col {
+    padding: 15px;
+}
+
+.pet-profile-row {
+    display: flex;
+}
+
+.pet-profile-col-1 {
+    flex-direction: column;
+    display: flex;
+    width: 33.33%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.pet-profile-col-2 {
+    width: 66.66%;
+}
+
+.pet-profile-row {
+    display: flex;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.pet-profile-info-col {
+    margin-bottom: 10px;
+}
+
+.pet-profile-info-col ul {
+    list-style: none;
+}
+
+.pet-profile-col-1 img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
 }
