@@ -10,11 +10,18 @@ const PetOwnerHome = () => {
 
   return (
     <div>
-      <h2>Welcome to Pet Owner Dashboard</h2>
-      <p>Hello, {name} 👋</p>
+      <div className="welcome-col container">
+      <h2>Welcome <span className="name">{name}!</span> Pet Owner Dashboard</h2>
+    </div>
+    <div className="dashboard container">
+      <div className="">
+        <div className="dashboard-col">
+          
+        </div>
+        <div className="dashboard-content">
 
-    <div className="dashboard">
-      <h1>Welcome, {name}!</h1>
+        </div>
+      </div>
       <PetProfile />
       <FeedingGuide />
       <GroomingVideos />

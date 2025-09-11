@@ -247,3 +247,36 @@ body{
     color: #132b45;
     font-weight: 800;
 }
+
+.services-content-wrapper {
+    z-index: 999;
+    display: flex;
+    align-items: flex-start;
+}
+
+.services-btn {
+    background-color: var(--red) !important;
+    padding: 10px 20px !important;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.services-btn:hover {
+    background-color: #fff;
+    padding: 10px 20px !important;
+    color: #000 ;
+    cursor: pointer;
+}
+
+.welcome-col {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.welcome-col h2 {
+    font-size: 22px;
+    background-color: #305781;
+    border-radius: 5px;
+    padding: 10px 16px;
+    color: #fff;
+}
