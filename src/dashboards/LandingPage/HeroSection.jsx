@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export default function HeroSection9() {
   const [hovered, setHovered] = useState(null);
@@ -9,17 +10,17 @@ export default function HeroSection9() {
   const [selectedRole, setSelectedRole] = useState(null);
   const [name, setName] = useState("");
   const navigate = useNavigate();
+ const data= useAuth()
 
-  // 👇 Har role ka unique path
   const roles = [
     { id: "owner", label: "Pet Owner", path: "/petowner" },
     { id: "vet", label: "Veterinarian", path: "/vartenian" },
     { id: "shelter", label: "Animal Shelter / Rescue Volunteer", path: "/shelter" },
   ];
 
-  // ✅ ab role object store hoga (label nahi)
   const handleRoleClick = (role) => {
     setSelectedRole(role);
+    // localStorage.setItem("name",role)
     setShowPopup(true);
     setExpanded(false);
     setName("");
@@ -27,15 +28,17 @@ export default function HeroSection9() {
 
   const handleSubmit = () => {
     if (name.trim() !== "") {
+data.setName(name)
+      localStorage.setItem("name",name)
       setExpanded(true);
+      
     }
   };
 
-  // 👇 Auto-redirect 2 second ke baad
   useEffect(() => {
     if (expanded && selectedRole) {
       const timer = setTimeout(() => {
-        navigate(selectedRole.path); // ✅ ab correct path use karega
+        navigate(selectedRole.path); 
       }, 1500);
       return () => clearTimeout(timer);
     }
@@ -43,7 +46,7 @@ export default function HeroSection9() {
 
   return (
     <div className="h-screen w-screen flex ">
-      {/* Role selection buttons */}
+      {/* buttons selection */}
       {roles.map((role) => (
         <motion.button
           key={role.id}
@@ -58,7 +61,7 @@ export default function HeroSection9() {
           <div className="flex flex-col items-center gap-2 services-content-wrapper">
             <h3>{role.label}</h3>
 
-            {/* 👇 Click Me button always below headline */}
+            {/* Click button */}
             <AnimatePresence>
               {hovered === role.id && (
                 <motion.button

@@ -6,8 +6,6 @@ import HealthTips from '../../ components/HealthTips';
 import TrainingTips from '../../ components/TrainingTips';
 
 const PetOwnerHome = () => {
-  const { name } = useAuth();
-
   return (
     <div>
       <div className="welcome-col container">

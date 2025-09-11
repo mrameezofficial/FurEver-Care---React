@@ -11,7 +11,7 @@
   line-height: 1.5;
   font-weight: 600;
 
-  background-color: #132b45;
+  background-color: #fff;
 
   --green: #1a5d5f;
   --darkblue: #132b45;
@@ -341,4 +341,102 @@ body{
 
 .dropdown-menu li a {
   white-space: nowrap;
+}
+
+.inner-banner {
+    background-color: beige;
+    padding: 100px 20px;
+}
+
+.inner-banner .row {
+    margin: 0 auto;
+}
+
+.banner-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.vet-section {
+    padding: 80px 20px;
+}
+
+.vet-section .container {
+    padding: 30px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.vet-info-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.vet-info-para {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vet-help-info-row {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cacaca;
+}
+
+.vet-help-table {
+    margin-top: 10px;
+}
+
+.vet-help-table thead th {
+    padding: 6px;
+}
+
+.vet-help-table td {
+    padding: 8px;
+}
+
+.vet-help-table thead {
+    background-color: var(--red);
+}
+
+.vet-help-table thead th {
+    padding: 6px;
+    color: #fff;
+    border-color: #921f00;
+}
+
+.pet-owner-section {
+    padding: 60px 20px;
+}
+
+.pet-owner-row {
+    padding: 20px;
+    background-color: #f3f3ef;
+    border-radius: 10px;
+    border: 6px solid #eee;
+}
+
+.list-disc {
+    padding-left: 16px;
+}
+
+.topbar {
+    background-color: var(--darkblue);
+    padding: 10px 10px;
+}
+
+.topbar .container {
+    display: flex;
+}
+
+.time-date {
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
 }

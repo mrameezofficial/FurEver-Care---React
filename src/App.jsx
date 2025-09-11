@@ -4,18 +4,18 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
 import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import FeedingGuide from "./ components/FeedingGuide";
 import GroomingVideos from "./ components/GroomingVideos";
 import HealthTips from "./ components/HealthTips";
 import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
 import Header from "./ components/header";
 import { useLocation } from "react-router-dom";
+import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
+import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
 
 
 // Protected Route Component
@@ -51,8 +51,8 @@ const App = () => {
         />
       
         <Route 
-          path="/pet-care"
-          element={<PetOwnerPetCare/>}
+          path="/pet-profile"
+          element={<PetOwnerPetProfile/>}
         />
         <Route 
           path="/feedback"
@@ -72,7 +72,7 @@ const App = () => {
         />
         <Route 
           path="/feeding-guide" 
-          element={<FeedingGuide />} 
+          element={<PetOwnerFeedingGuide />}
         />
         <Route 
           path="/grooming-videos" 

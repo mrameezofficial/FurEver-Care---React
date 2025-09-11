@@ -18,22 +18,9 @@ const RealTimeClock = ({ showDate = true, fontSize = "24px", color = "#333" }) =
   const formattedDate = currentTime.toLocaleDateString();
 
   return (
-    <div
-      style={{
-        fontFamily: "Arial, sans-serif",
-        fontSize: fontSize,
-        color: color,
-        textAlign: "center",
-        padding: "10px 0",
-        background: "#f0f0f0",
-        borderRadius: "8px",
-        width: "fit-content",
-        margin: "auto",
-        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-      }}
-    >
-      <div>{formattedTime}</div>
-      {showDate && <div style={{ fontSize: "16px", color: "#555" }}>{formattedDate}</div>}
+    <div className="time-date">
+      <div>{formattedTime}</div> | 
+      {showDate && <div>{formattedDate}</div>}
     </div>
   );
 };
