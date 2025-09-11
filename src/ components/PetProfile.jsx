@@ -3,10 +3,11 @@ import petProfile from '../data/petProfile.json';
 
 const PetProfile = () => {
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h1 className="text-3xl font-bold mb-4 text-center">🐾 Pet Profile</h1>
+    <div>
+      <h1 className="text-3xl font-bold mb-4 text-center">Pet Profile</h1>
+    <div className="pet-profile-row">
 
-      <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
+      <div className="flex flex-col md:flex-row items-center gap-6 mb-6 pet-profile-col-1">
         <img
           src={petProfile.avatarUrl}
           alt={`${petProfile.name}'s Avatar`}
@@ -27,8 +28,9 @@ const PetProfile = () => {
           </p>
         </div>
       </div>
-
-      <h2 className="text-xl font-semibold mb-2">💉 Vaccination Details</h2>
+      <div className='pet-profile-col-2'>
+        <div className="pet-profile-info-col">
+      <h2 className="text-xl font-semibold mb-2">Vaccination Details</h2>
       <ul className="list-disc pl-6 mb-6">
         {petProfile.vaccinationDetails?.map((v, index) => (
   <li key={index}>
@@ -37,11 +39,15 @@ const PetProfile = () => {
 ))}
 
       </ul>
-
-      <h2 className="text-xl font-semibold mb-2">👤 Owner Information</h2>
+      </div>
+    <div className="pet-profile-info-col">
+      <h2 className="text-xl font-semibold mb-2">Owner Information</h2>
       <p><strong>Name:</strong> {petProfile.owner.name}</p>
       <p><strong>Contact:</strong> {petProfile.owner.contact}</p>
       <p><strong>Email:</strong> {petProfile.owner.email}</p>
+      </div>
+    </div>
+    </div>
     </div>
   )
 }
