@@ -41,7 +41,7 @@ const App = () => {
 
     <div>
     <AuthProvider>
-    {location.pathname !== "/" && <Headernew />}
+    {location.pathname !== "/" && <Header />}
       <Routes>
         <Route 
           path="/" 
