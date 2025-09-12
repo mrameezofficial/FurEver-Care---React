@@ -1,11 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import productData from '../data/petProducts.json';
 
 const PetProductShowcase = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState('All');
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const categories = ['All', 'Dog/Cat Food', 'Toys', 'Grooming Essentials', 'Bedding and Apparel', 'Health Supplements'];
+  // Get category from query param (default "All")
+  const queryParams = new URLSearchParams(location.search);
+  const initialCategory = queryParams.get('category') || 'All';
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState(initialCategory);
+
+  const categories = [
+    'All',
+    'Dog/Cat Food',
+    'Toys',
+    'Grooming Essentials',
+    'Bedding and Apparel',
+    'Health Supplements',
+  ];
+
+  // Update filter when query param changes
+  useEffect(() => {
+    const urlCategory = queryParams.get('category') || 'All';
+    setCategoryFilter(urlCategory);
+  }, [location.search]);
+
+  // Change filter + update URL
+  const handleCategoryChange = (cat) => {
+    setCategoryFilter(cat);
+    navigate(`/products?category=${encodeURIComponent(cat)}`);
+  };
 
   const filteredProducts = productData.filter((product) => {
     const matchesSearch =
@@ -17,14 +44,16 @@ const PetProductShowcase = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">🛍️ Pet Product Showcase</h1>
+      <h2 className="text-3xl font-bold mb-4 product-showcase-title">
+        Pet Product Showcase
+      </h2>
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-4 mb-6">
+      <div className="flex flex-wrap gap-4 mb-6 product-filter-tabs">
         {categories.map((cat) => (
           <button
             key={cat}
-            onClick={() => setCategoryFilter(cat)}
+            onClick={() => handleCategoryChange(cat)}
             className={`px-3 py-1 rounded border ${
               categoryFilter === cat ? 'bg-blue-600 text-white' : 'bg-white'
             }`}
@@ -37,16 +66,19 @@ const PetProductShowcase = () => {
       {/* Search */}
       <input
         type="text"
-        placeholder="🔍 Search products..."
+        placeholder="Search products..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full mb-6 px-4 py-2 border rounded"
+        className="w-full mb-6 px-4 py-2 border rounded product-search"
       />
 
       {/* Products */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="bg-white shadow-md rounded p-4 border">
+          <div
+            key={product.id}
+            className="bg-white shadow-md rounded p-4 border product-card"
+          >
             <img
               src={product.image}
               alt={product.name}
@@ -70,4 +102,4 @@ const PetProductShowcase = () => {
   );
 };
 
-export default PetProductShowcase
+export default PetProductShowcase;

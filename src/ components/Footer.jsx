@@ -11,12 +11,12 @@ const Footer = () => {
             <div className="col-3">
               <div className="footer-widget">
                 <div className="footer-text">
+                  <img src="../../src/assets/furever-care-logo.png" width="160px" />
                   <p>
-                    The best overall dog DNA test Embark Breed &amp; Health Kit
-                    (view at Chewy) which provides overall dog you.
+                    
                   </p>
                 </div>
-                <div className="footer-contact">
+                {/* <div className="footer-contact">
                   <div className="footer-icon">
                     <i className="fas fa-headphones"></i>
                   </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                     </h4>
                     <span className="contact-span">Call Now</span>
                   </div>
-                </div>
+                </div> */}
                 <div className="footer-social">
                   <ul>
                     <li>
@@ -134,7 +134,7 @@ const Footer = () => {
           <div className="copyright-area-rows">
             <div className="col-8">
               <div className="copyright-text">
-                <p>Copyright © 2022 kutto. All Rights Reserved.</p>
+                <p>Copyright © 2022 FurEver Care. All Rights Reserved.</p>
               </div>
             </div>
           </div>

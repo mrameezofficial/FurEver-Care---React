@@ -4,7 +4,7 @@ import trainingTips from '../data/trainingTips.json';
 const TrainingTips = () => {
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4 mb-18 pet-owner-title">Training Tips</h2>
+      <h2 className="text-2xl font-bold pet-owner-title">Training Tips</h2>
 
       {Object.entries(trainingTips).map(([animalType, tips]) => (
         <div key={animalType} className="mb-6">

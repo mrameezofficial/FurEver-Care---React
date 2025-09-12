@@ -4,18 +4,12 @@ import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
 import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import PetOwnerPetCare from "./dashboards/PetOwner/PetOwnerPetCare";
 import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import FeedingGuide from "./ components/FeedingGuide";
-import GroomingVideos from "./ components/GroomingVideos";
-import HealthTips from "./ components/HealthTips";
-import TrainingTips from "./ components/TrainingTips";
-import PetProductShowcase from "./ components/PetProductShowcase";
+import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
-import Header from "./ components/header";
 import Footer from "./ components/Footer";
 import ContactUs from "./ components/ContactUs";
 import Scrolling from "./ components/Scrolling";
@@ -23,7 +17,13 @@ import AboutUs from "./ components/AboutUs";
 import VetFormPage from "./dashboards/VetFormPage";
 import VetProfilePage from "./dashboards/VetProfilePage";
 
-
+import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
+import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
+import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
+import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShowcase";
+import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
+import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
+import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
   const { category } = useAuth();
@@ -54,13 +54,12 @@ const App = () => {
           element={<Welcome />} 
         />
         <Route
-          path="/petowner"
+          path="/pet-owner"
           element= {<PetOwnerHome />}
         />
-      
         <Route 
-          path="/pet-care"
-          element={<PetOwnerPetCare/>}
+          path="/pet-profile"
+          element={<PetOwnerPetProfile />}
         />
         <Route 
           path="/feedback"
@@ -75,28 +74,28 @@ const App = () => {
           element={<PetOwnerAbout />}
         />
         <Route 
-          path="/form"
+          path="/pet-form"
           element={<PetOwnerForm />}
         />
         <Route 
           path="/feeding-guide" 
-          element={<FeedingGuide />} 
+          element={<PetOwnerFeedingGuide/>}
         />
         <Route 
           path="/grooming-videos" 
-          element={<GroomingVideos />} 
+          element={<PetOwnerGroomingVideos />}
         />
         <Route 
           path="/health-tips" 
-          element={<HealthTips />} 
+          element={<PetOwnerHealthTips/>} 
         />
         <Route 
-          path="/tranning-tips" 
-          element={<TrainingTips />} 
+          path="/training-tips" 
+          element={<PetOwnerTraningTips/>}
         />
         <Route 
           path="/products" 
-          element={<PetProductShowcase />} 
+          element={<PetOwnerProductsShowcase/>}
         />
          <Route 
           path="/vartenian" 
@@ -108,8 +107,8 @@ const App = () => {
           element={<ShelterHome />} 
         />
         <Route 
-          path="/contact-us" 
-          element={<ContactUs />} 
+          path="/contact" 
+          element={<PetOwnerContact />}
         />
 
          <Route 
@@ -118,8 +117,8 @@ const App = () => {
         />
 
       </Routes>
-      <Scrolling />
      <Footer />
+     <Scrolling />
       
     </AuthProvider>
 

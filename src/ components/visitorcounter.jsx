@@ -28,17 +28,8 @@ const VisitorCounter = ({
 // Styles
 const styles = {
   container: {
-    fontFamily: "Arial, sans-serif",
-    fontSize: "24px",
-    color: "#fff",
-    backgroundColor: "#28a745",
-    padding: "15px 30px",
-    borderRadius: "10px",
-    textAlign: "center",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-    width: "fit-content",
-    margin: "20px auto",
-    transition: "all 0.3s ease"
+    fontSize: "14px",
+    color: "#FFF",
   },
   label: {
     fontWeight: "bold",
