@@ -2,7 +2,7 @@ import React from "react";
 
 function Listing({ pet }) {
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+    <div className="bg-white shadow-md rounded p-4 border shltr-card transition">
       <img src={pet.image} alt={pet.name} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-semibold text-gray-800">{pet.name}</h3>

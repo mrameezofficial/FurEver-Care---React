@@ -553,7 +553,43 @@ h4.fw-title {
 
 }
 
+.shelter-filter-tabs {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+.shltr-hd{
 
+   margin-bottom: 12px;
+}
+.shltr-btn{
 
+    padding: 5px 15px;
+    font-size: 14px;
+    background-color: var(--darkblue);
+    color: #fff;
 
+}
+
+.shltr-btn:hover{
+
+      background-color: var(--red);
+}
+
+.shltr-card{
+
+  padding: 12px;
+
+}
+.shltr-hd2{
+
+  padding-top: 40px;
+  margin-bottom: 12px;
+}
+
+.shltr-event{
+
+padding: 12px;
+}
 

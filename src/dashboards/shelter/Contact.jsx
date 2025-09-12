@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
+      <h2 className="text-3xl font-bold mb-4 text-gray-800 pt-[20vw] shltr-hd2">Contact Us</h2>
       <div className="bg-white shadow-md rounded-lg p-6">
         <p className="text-gray-700 mb-2">📧 contact@animalshelter.org</p>
         <p className="text-gray-700 mb-4">📞 +123 456 7890</p>

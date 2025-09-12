@@ -14,7 +14,7 @@ function PetFilter({ setFilter }) {
         <button
           key={btn.value}
           onClick={() => setFilter(btn.value)}
-          className="px-4 py-2 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition"
+          className="px-3 py-1 rounded border bg-blue-600 text-white transition shltr-btn"
         >
           {btn.label}
         </button>

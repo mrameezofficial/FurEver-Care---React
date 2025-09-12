@@ -3,8 +3,8 @@ import React from "react";
 function Events({ events }) {
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Upcoming Events</h2>
-      <div className="space-y-4">
+      <h2 className="text-3xl font-bold mb-4 text-gray-800 pt-[20vw] shltr-hd2">Upcoming Events</h2>
+      <div className="space-y-4 shltr-event">
         {events.map(event => (
           <div
             key={event.id}
