@@ -8,9 +8,7 @@ import TrainingTips from '../../ components/TrainingTips';
 const PetOwnerHome = () => {
   return (
     <div>
-      <div className="welcome-col container">
-      <h2>Welcome <span className="name">{name}!</span> Pet Owner Dashboard</h2>
-    </div>
+      
     <div className="dashboard container">
       <div className="">
         <div className="dashboard-col">

@@ -29,7 +29,7 @@ export default function Header() {
       </div>
 
       {/* Header */}
-      <header className="bg-white shadow-md relative z-50">
+      <header className="bg-white shadow-md relative z-50 header-sec">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
           <Link to="/">
@@ -78,27 +78,27 @@ export default function Header() {
               </button>
               <ul className="absolute hidden group-hover:block bg-white border mt-1 py-2 px-4 shadow-md">
                 <li>
-                  <Link to="/product/dog-cat-food" className="block py-1">
+                  <Link to="/products?category=Dog%2FCat%20Food" className="block py-1">
                     Dog/Cat Food
                   </Link>
                 </li>
                 <li>
-                  <Link to="/product/toys" className="block py-1">
+                  <Link to="/products?category=Toys" className="block py-1">
                     Toys
                   </Link>
                 </li>
                 <li>
-                  <Link to="/product/grooming" className="block py-1">
+                  <Link to="/products?category=Grooming%20Essentials" className="block py-1">
                     Grooming Essentials
                   </Link>
                 </li>
                 <li>
-                  <Link to="/product/bedding" className="block py-1">
+                  <Link to="/products?category=Bedding%20and%20Apparel" className="block py-1">
                     Bedding & Apparel
                   </Link>
                 </li>
                 <li>
-                  <Link to="/product/health" className="block py-1">
+                  <Link to="/products?category=Health%20Supplements" className="block py-1">
                     Health Supplements
                   </Link>
                 </li>
@@ -110,7 +110,7 @@ export default function Header() {
             <Link to="/contact">Contact Us</Link>
           </nav>
           <div className="header-btn-col">
-            <span className="ml-4 font-semibold text-blue-700">
+            <span className="ml-4 font-semibold text-blue-700 welcome-user">
               Welcome, {auth?.userName || userName}
             </span>
             <button

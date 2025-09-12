@@ -10,13 +10,16 @@ import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
 import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
+import Footer from "./ components/Footer";
+import Contact from "./dashboards/shelter/Contact";
+import ContactUs from "./ components/ContactUs";
 import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
 import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
 import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
+import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShowcase";
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
-import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShowcase";
-
+import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -39,19 +42,19 @@ const App = () => {
 
     <div>
     <AuthProvider>
-    {location.pathname !== "/" && <Header/>}
+    {location.pathname !== "/" && <Header />}
       <Routes>
         <Route 
           path="/" 
           element={<Welcome />} 
         />
         <Route
-          path="/petowner"
+          path="/pet-owner"
           element= {<PetOwnerHome />}
         />
         <Route 
           path="/pet-profile"
-          element={<PetOwnerPetProfile/>}
+          element={<PetOwnerPetProfile />}
         />
         <Route 
           path="/feedback"
@@ -66,24 +69,24 @@ const App = () => {
           element={<PetOwnerAbout />}
         />
         <Route 
-          path="/form"
+          path="/pet-form"
           element={<PetOwnerForm />}
         />
         <Route 
           path="/feeding-guide" 
-          element={<PetOwnerFeedingGuide />}
+          element={<PetOwnerFeedingGuide/>}
         />
         <Route 
           path="/grooming-videos" 
-          element={<PetOwnerGroomingVideos />} 
+          element={<PetOwnerGroomingVideos />}
         />
         <Route 
           path="/health-tips" 
-          element={<PetOwnerHealthTips />} 
+          element={<PetOwnerHealthTips/>} 
         />
         <Route 
           path="/training-tips" 
-          element={<PetOwnerTraningTips/>} 
+          element={<PetOwnerTraningTips/>}
         />
         <Route 
           path="/products" 
@@ -97,8 +100,13 @@ const App = () => {
           path="/shelter" 
           element={<ShelterHome />} 
         />
+        <Route 
+          path="/contact" 
+          element={<PetOwnerContact />}
+        />
 
       </Routes>
+    {location.pathname !== "/" && <Footer />}
       
     </AuthProvider>
 

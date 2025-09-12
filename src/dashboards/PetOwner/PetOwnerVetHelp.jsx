@@ -14,7 +14,7 @@ const PetOwnerVetHelp = () => {
 
           <h3 className="text-xl font-semibold mt-6 mb-2">Vet Emergency Contacts</h3>
 
-          <table className="w-full table-auto border border-gray-400 mb-6 vet-help-table">
+<div className='table-wrapper'>          <table className="w-full table-auto border border-gray-400 mb-6 vet-help-table">
             <thead className="bg-rose-200">
               <tr>
                 <th className="px-4 py-2 border">Clinic Name</th>
@@ -40,7 +40,7 @@ const PetOwnerVetHelp = () => {
               </tr>
             </tbody>
           </table>
-
+</div>
           <div className="vet-help-info-row">
             <h3 className="text-xl font-semibold mb-2">Contact Info</h3>
             <p className="flex items-center gap-2"><FaMapMarkerAlt /> Plot #5, Pet Street, Karachi</p>
