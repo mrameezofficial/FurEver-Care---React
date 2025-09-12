@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 export default function HeroSection9() {
   const [hovered, setHovered] = useState(null);
@@ -9,17 +10,17 @@ export default function HeroSection9() {
   const [selectedRole, setSelectedRole] = useState(null);
   const [name, setName] = useState("");
   const navigate = useNavigate();
+ const data= useAuth()
 
-  // 👇 Har role ka unique path
   const roles = [
-    { id: "owner", label: "Pet Owner", path: "/petowner" },
-    { id: "vet", label: "Veterinarian", path: "/vet-form-page" },
+    { id: "owner", label: "Pet Owner", path: "/pet-owner" },
+    { id: "vet", label: "Veterinarian", path: "/vartenian" },
     { id: "shelter", label: "Animal Shelter / Rescue Volunteer", path: "/shelter" },
   ];
 
-  // ✅ ab role object store hoga (label nahi)
   const handleRoleClick = (role) => {
     setSelectedRole(role);
+    // localStorage.setItem("name",role)
     setShowPopup(true);
     setExpanded(false);
     setName("");
@@ -27,23 +28,25 @@ export default function HeroSection9() {
 
   const handleSubmit = () => {
     if (name.trim() !== "") {
+data.setName(name)
+      localStorage.setItem("name",name)
       setExpanded(true);
+      
     }
   };
 
-  // 👇 Auto-redirect 2 second ke baad
   useEffect(() => {
     if (expanded && selectedRole) {
       const timer = setTimeout(() => {
-        navigate(selectedRole.path); // ✅ ab correct path use karega
+        navigate(selectedRole.path); 
       }, 1500);
       return () => clearTimeout(timer);
     }
   }, [expanded, selectedRole, navigate]);
 
   return (
-    <div className="h-screen w-screen flex ">
-      {/* Role selection buttons */}
+    <div className="landing-page-section">
+      {/* buttons selection */}
       {roles.map((role) => (
         <motion.button
           key={role.id}
@@ -58,7 +61,7 @@ export default function HeroSection9() {
           <div className="flex flex-col items-center gap-2 services-content-wrapper">
             <h3>{role.label}</h3>
 
-            {/* 👇 Click Me button always below headline */}
+            {/* Click button */}
             <AnimatePresence>
               {hovered === role.id && (
                 <motion.button
@@ -118,7 +121,7 @@ export default function HeroSection9() {
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <h2 className="text-2xl font-bold mb-6 text-center text-teal-700">
+                    <h2 className="popup-title">
                       Welcome {selectedRole?.label}
                     </h2>
                     <input
@@ -126,11 +129,12 @@ export default function HeroSection9() {
                       placeholder="Enter your name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
+                      required
                       className="w-full border rounded-lg px-4 py-2 mb-4"
                     />
                     <button
                       onClick={handleSubmit}
-                      className="w-full py-2 rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
+                      className="popup-btn"
                     >
                       Continue
                     </button>

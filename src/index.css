@@ -14,8 +14,7 @@
  font-weight: 600;
 
 
- background-color: #132b45;
-
+  background-color: #fff;
 
  --green: #1a5d5f;
  --darkblue: #132b45;
@@ -25,18 +24,23 @@
  --globeWidth: 1200px;
 }
 
+button{
+    cursor: pointer;
+}
 
 body{
    font-family: "Inter Tight", sans-serif;
 }
 
-
-
-
 .feedback-form {
-   padding: 30px;
-   background-color: #443941;
-   border-radius: 18px;
+    padding: 30px;
+    background-color: #f3f3f3;
+    border-radius: 18px;
+    width: 660px;
+}
+
+.feedback-section .row {
+    justify-content: center;
 }
 
 
@@ -215,34 +219,113 @@ body{
 }
 
 
+.product-filter-tabs {
+    margin-bottom: 12px;
+}
+
+.product-filter-tabs button {
+    padding: 5px 15px;
+    font-size: 14px;
+    background-color: var(--darkblue);
+    color: #fff;
+}
+
+.product-filter-tabs button.text-white,
+.product-filter-tabs button:hover {
+    background-color: var(--red);
+}
+
+.product-search {
+    margin-bottom: 14px;
+    padding: 8px;
+    background-color: #fff;
+    border-color: #eee;
+}
+
 .profile-name {
    font-size: 18px;
    line-height: 1.2em;
 }
 
+.header-btn-col {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.product-card {
+    padding: 12px;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    background-color: var(--red);
+}
+
+.product-card button:hover{
+    background-color: var(--darkblue);
+}
+
+.product-showcase-title {
+    margin-bottom: 10px;
+}
+
+.logout-btn {
+    background-color: var(--red);
+    padding: 8px 17px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: var(--darkblue);
+}
 
 .welcome-hero {
-   max-width: 600px !important;
-   margin: 0 auto;
-   text-align: center;
-   background-color: #f5f1eb63;
-   padding: 20px;
-   position: absolute;
-   z-index: 999 !important;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 100%;
-   border-radius: 0 0px 20px 20px;
-   backdrop-filter: blur(5px);
+    max-width: 600px !important;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f1eb63;
+    padding: 20px;
+    position: absolute;
+    z-index: 9 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-radius: 0 0px 20px 20px;
+    backdrop-filter: blur(5px);
 }
 
 
 .welcome-logo {
-   position: absolute;
-   z-index: 9999;
-   left: 30px;
+    position: absolute;
+    z-index: 9;
+    left: 30px;
 }
 
+.popup h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--darkblue);
+}
+
+.popup-btn {
+    width: 100%;
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    background-color: var(--darkblue);
+}
 
 .welcome-hero h1 {
    font-size: 38px !important;
@@ -255,6 +338,13 @@ body{
    font-weight: 800;
 }
 
+.margin-b-15{
+    margin-bottom: 15px;
+}
+
+.ct-main-body .col-1 {
+    width: 70%;
+}
 
 .services-content-wrapper {
    z-index: 999;
@@ -297,7 +387,7 @@ body{
 .pet-owner-dash-section {
    padding: 25px;
    background-color: antiquewhite;
-   margin-top: 30px;
+   margin-top: 50px;
    border-radius: 10px;
 }
 
@@ -351,6 +441,15 @@ body{
    list-style: none;
 }
 
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.mobile-menu details ul {
+    padding-left: 11px;
+}
 
 .pet-profile-col-1 img {
    width: 100%;
@@ -358,6 +457,15 @@ body{
    border: 1px solid #c4c4c4;
 }
 
+.header-nav {
+    gap: 16px;
+}
+
+.header-nav ul {
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #eee;
+}
 
 .main-nav {
  list-style: none;
@@ -398,7 +506,329 @@ body{
  white-space: nowrap;
 }
 
+.inner-banner {
+    background-color: beige;
+    padding: 100px 20px;
+}
 
+.inner-banner .row {
+    margin: 0 auto;
+}
 
+.banner-title {
+    text-align: center;
+    font-size: 50px;
+}
 
+.vet-section {
+    padding: 80px 20px;
+}
 
+.vet-section .container {
+    padding: 30px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.vet-info-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.vet-info-para {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vet-help-info-row {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cacaca;
+}
+
+.vet-help-table {
+    margin-top: 10px;
+}
+
+.vet-help-table thead th {
+    padding: 6px;
+}
+
+.vet-help-table td {
+    padding: 8px;
+}
+
+.vet-help-table thead {
+    background-color: var(--red);
+}
+
+.vet-help-table thead th {
+    padding: 6px;
+    color: #fff;
+    border-color: #921f00;
+}
+
+.pet-owner-section {
+    padding: 60px 20px;
+}
+
+.pet-owner-row {
+    padding: 20px;
+    background-color: #f3f3ef;
+    border-radius: 10px;
+    border: 6px solid #eee;
+}
+
+.list-disc {
+    padding-left: 16px;
+}
+
+.topbar {
+    background-color: var(--darkblue);
+    padding: 10px 10px;
+}
+
+.topbar .container {
+    display: flex;
+}
+
+.time-date {
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-submit-btn {
+    padding: 10px;
+    background-color: var(--red);
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.feedback-submit-btn:hover{
+    background-color: var(--darkblue);
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row textarea {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid #b8b8b8;
+}
+
+.landing-page-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+/* Basic Responsive Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-sec {
+    padding: 0 20px 0 10px;
+}
+
+.footer-container {
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.dashboard.container {
+    padding: 0 20px 60px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .contact-info-wrap{
+        padding: 15px !important;
+    }
+
+    .col-3 {
+    padding-left: 0 !important;
+}
+
+    .footer-container .row {
+    flex-direction: column;
+}
+
+    .main-hd {
+    flex-direction: column;
+}
+
+    .ct-main-body .col-1 {
+    width: 100%;
+}
+
+    .table-wrapper {
+    overflow: auto;
+}
+
+    .product-filter-tabs {
+    gap: 6px;
+}
+
+.product-filter-tabs button {
+    padding: 5px 8px;
+    font-size: 10px;
+}
+
+.welcome-logo img {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+.welcome-hero h1 {
+    font-size: 24px !important;
+}
+
+.welcome-hero h3 {
+    font-size: 14px;
+}
+
+.welcome-service-col h3 {
+    font-size: 24px;
+}
+
+    .welcome-logo {
+        position: relative;
+        left: 0;
+    }
+
+        .welcome-hero {
+        padding: 0 15px 15px;
+        position: relative;
+        left: unset;
+        transform: translateX(0);
+        background-color: #fff;
+    }
+
+    .landing-page-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: calc(100vh - 193px);
+    }
+
+    .services-btn {
+    padding: 7px 16px !important;
+    font-size: 12px;
+}
+
+.welcome-service-col.shelter {
+    grid-column: span 2;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header-btn-col .welcome-user {
+    display: none;
+}
+
+    .pet-profile-col-2 {
+    width: 100%;
+}
+
+    .pet-profile-row {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pet-profile-col-1 {
+    width: 100%;
+}
+
+    .inner-banner {
+    background-color: beige;
+    padding: 40px 20px;
+}
+
+.banner-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+  
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .main-nav li {
+    margin: 10px 0;
+  }
+
+  .header-nav a {
+    font-size: 11px;
+}
+  
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-nav a,
+    .header-nav button {
+    font-size: 11px;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

@@ -1,11 +1,9 @@
 .main-ftr {
-
-background-color: #f5f2eb;
-
+    background-color: #f5f2eb;
 }
 
-.ct-main-body {
-    background-color: #fff;
+.footer-bg{
+  padding: 60px 20px;
 }
 
 .breadcrumps-section {
@@ -19,10 +17,7 @@ background-color: #f5f2eb;
 
 .main-hd {
   display: flex;
-  max-width: 1200px;
-  padding: 80px 20px;
   gap: 50px;
-  margin: 0 auto;
 }
 
 .breadcrumps-content {
@@ -56,13 +51,6 @@ background-color: #f5f2eb;
   color: #676666;
 }
 
-.contact-title .sub-title {
-  font-size: 32px;
-  line-height: 1;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
 .contact-title .title {
   font-size: 40px;
   letter-spacing: -0.5px;
@@ -87,9 +75,10 @@ background-color: #f5f2eb;
 }
 
 .contact-info-wrap {
-  background: #f5f2eb;
-  border-radius: 12px;
-  padding: 38px 55px 45px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 38px 55px 45px;
+    height: 100%;
 }
 
 .contact-info-list {
@@ -112,19 +101,22 @@ background-color: #f5f2eb;
 }
 
 .contact-form .form-grp {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  background: #f5f2eb;
-  border: none;
-  font-size: 14px;
-  padding: 15px 20px;
-  border-radius: 5px;
-  display: block;
-  font-weight: 400;
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    padding: 12px 14px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.contact-form .checkbox-grp #checkbox {
+    margin-right: 10px;
+    width: auto;
 }
 
 .contact-form textarea {
@@ -266,7 +258,7 @@ background-color: #f5f2eb;
 }
 
 .footer-widget {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .fw-link {
@@ -309,7 +301,7 @@ h4.fw-title {
     line-height: 26px;
     margin-bottom: 0;
     position: relative;
-    padding-left: 15px;
+    text-align: center;
 }
 
 .copyright-area-rows {
@@ -317,22 +309,9 @@ h4.fw-title {
     align-items: center;
 }
 
-.copyright-text p::before {
-    content: "|";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #d5d5d5;
-    font-size: 14px;
-}
-
-.footer-container {
-    margin: 0px 150px;
-}
-
 .Copyright-container {
-    margin: 0px 208px;
+    margin: 0px auto;
+    max-width: 1200px;
 }
 
 

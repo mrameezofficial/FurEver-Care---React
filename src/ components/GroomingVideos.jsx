@@ -4,7 +4,7 @@ import groomingData from '../data/groomingVideos.json';
 const GroomingVideos = () => {
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">🐾 Grooming Videos</h2>
+      <h2 className="text-2xl font-bold mb-4">Grooming Videos</h2>
 
       {Object.entries(groomingData).map(([animalType, videos]) => (
         <div key={animalType} className="mb-6">
