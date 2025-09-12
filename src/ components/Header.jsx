@@ -38,7 +38,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-6 items-center header-nav">
-            <Link to="/">Home</Link>
+            <Link to="/pet-owner">Home</Link>
             <Link to="/about">About Us</Link>
 
             <div className="relative group">

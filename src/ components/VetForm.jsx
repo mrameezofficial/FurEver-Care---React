@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Camera } from "lucide-react";
 
-
 export default function VetForm() {
   const [form, setForm] = useState({
     name: "",
@@ -15,18 +14,15 @@ export default function VetForm() {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
-
   // Prevent numbers in Name field
   const handleNameKeyDown = (e) => {
     if (/\d/.test(e.key)) e.preventDefault();
   };
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
-
 
   const handleImageChange = (e) => {
     const file = e.target.files && e.target.files[0];
@@ -36,9 +32,7 @@ export default function VetForm() {
     reader.readAsDataURL(file);
   };
 
-
   const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
-
 
   const validate = () => {
     const newErrors = {};
@@ -50,21 +44,17 @@ export default function VetForm() {
       newErrors.email = "Valid email is required.";
     if (!imagePreview) newErrors.image = "Profile image is required.";
 
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-
     // All validations passed → navigate
-    navigate("/vet-profile", { state: { ...form, image: imagePreview } });
+    navigate("/vet-profile-page", { state: { ...form, image: imagePreview } });
   };
-
 
   return (
     <div className="ct-main-body">
@@ -77,7 +67,6 @@ export default function VetForm() {
                 Enter Vet Details<span className="exclimation">.</span>
               </h2>
             </div>
-
 
             <div className="contact-wrap-content">
               <form className="contact-form" onSubmit={handleSubmit} noValidate>
@@ -97,7 +86,6 @@ export default function VetForm() {
                   {errors.name && <small style={{ color: "red" }}>{errors.name}</small>}
                 </div>
 
-
                 {/* Specialization */}
                 <div className="form-grp">
                   <label className="form-label" htmlFor="specialization">
@@ -115,7 +103,6 @@ export default function VetForm() {
                   )}
                 </div>
 
-
                 {/* Phone */}
                 <div className="form-grp">
                   <label className="form-label" htmlFor="phone">
@@ -131,7 +118,6 @@ export default function VetForm() {
                   {errors.phone && <small style={{ color: "red" }}>{errors.phone}</small>}
                 </div>
 
-
                 {/* Email */}
                 <div className="form-grp">
                   <label className="form-label" htmlFor="email">
@@ -146,7 +132,6 @@ export default function VetForm() {
                   />
                   {errors.email && <small style={{ color: "red" }}>{errors.email}</small>}
                 </div>
-
 
                 {/* Image Upload */}
                 <div className="form-grp">
@@ -173,14 +158,12 @@ export default function VetForm() {
                   {errors.image && <small style={{ color: "red" }}>{errors.image}</small>}
                 </div>
 
-
                 <button type="submit" className="btn rounded-btn">
                   Save & Continue
                 </button>
               </form>
             </div>
           </div>
-
 
           {/* Right Column (Optional Image / Info) */}
           <div className="col-2">
@@ -195,8 +178,3 @@ export default function VetForm() {
     </div>
   );
 }
-
-
-
-
-

@@ -680,6 +680,15 @@ body{
     flex-wrap: wrap;
 }
 
+.popup div button {
+    background-color: var(--red);
+    padding: 10px;
+}
+
+.popup div button:hover {
+    background-color: var(--darkblue);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
