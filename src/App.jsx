@@ -8,7 +8,6 @@ import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
 import Footer from "./ components/Footer";
 import ContactUs from "./ components/ContactUs";
@@ -24,6 +23,7 @@ import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShow
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
+import Header from "./ components/header";
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
   const { category } = useAuth();
