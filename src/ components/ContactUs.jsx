@@ -1,21 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faPhone, faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    checkbox: false
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { id, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: type === "checkbox" ? checked : value
+    }));
+  };
+
+  const handleNameKeyDown = (e) => {
+    if (/\d/.test(e.key)) {
+      e.preventDefault();
+    }
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = () => {
+    if (validate()) {
+      alert("Form submitted successfully!");
+      // submit logic here
+    }
+  };
+
   return (
     <div className="ct-main-body">
-      {/* Breadcrumb Section */}
-      <section className="breadcrumps-section">
-        <div className="containers">
-          <div className="main-hd">
-            <div>
-              <div className="breadcrumps-content">
-                <h2 className="title">Contact us</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section>
         <div className="main-hd">
@@ -29,41 +69,62 @@ const ContactUs = () => {
             </div>
 
             <div className="contact-wrap-content">
-              <p>
-                The domestic dog is a doiated dendant of the wolf. The dog
-                derived from an ancient, extinct wolf, and the modern grey.
-              </p>
-
-              <form className="contact-form">
+              <form className="contact-form" noValidate>
                 <div className="form-grp">
                   <label className="form-label" htmlFor="name">
                     Your Name <span className="exclimation">*</span>
                   </label>
-                  <input type="text" id="name" placeholder="Jon Deo..." />
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Jon Deo..."
+                    value={formData.name}
+                    onChange={handleChange}
+                    onKeyDown={handleNameKeyDown}
+                  />
+                  {errors.name && <small style={{ color: "red" }}>{errors.name}</small>}
                 </div>
 
                 <div className="form-grp">
                   <label className="form-label" htmlFor="email">
                     Your Email <span className="exclimation">*</span>
                   </label>
-                  <input type="email" id="email" placeholder="info.example@.com" />
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="info.example@.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && <small style={{ color: "red" }}>{errors.email}</small>}
                 </div>
 
                 <div className="form-grp">
                   <label className="form-label" htmlFor="message">
                     Your Message <span className="exclimation">*</span>
                   </label>
-                  <textarea id="message" placeholder="Opinion..."></textarea>
+                  <textarea
+                    id="message"
+                    placeholder="Opinion..."
+                    value={formData.message}
+                    onChange={handleChange}
+                  />
+                  {errors.message && <small style={{ color: "red" }}>{errors.message}</small>}
                 </div>
 
                 <div className="form-grp checkbox-grp">
-                  <input type="checkbox" id="checkbox" />
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    checked={formData.checkbox}
+                    onChange={handleChange}
+                  />
                   <label className="email-adress" htmlFor="checkbox">
                     Don’t show your email address
                   </label>
                 </div>
 
-                <button type="button" className="btn rounded-btn">
+                <button type="button" className="btn rounded-btn" onClick={handleSubmit}>
                   Send Now
                 </button>
               </form>
@@ -81,7 +142,7 @@ const ContactUs = () => {
                 <ul className="contact-info-list">
                   <li>
                     <div className="contact-icons">
-                      <i className="fa-solid fa-location-dot"></i>
+                      <FontAwesomeIcon icon={faLocationDot} />
                     </div>
                     <div className="content">
                       <p>W84 New Park Lan, New York, NY 4586 United States</p>
@@ -89,7 +150,7 @@ const ContactUs = () => {
                   </li>
                   <li>
                     <div className="contact-icons">
-                      <i className="fa-solid fa-phone"></i>
+                      <FontAwesomeIcon icon={faPhone} />
                     </div>
                     <div className="content">
                       <p>+9 (256) 254 9568</p>
@@ -97,7 +158,7 @@ const ContactUs = () => {
                   </li>
                   <li>
                     <div className="contact-icons">
-                      <i className="fas fa-envelope-open"></i>
+                      <FontAwesomeIcon icon={faEnvelopeOpen} />
                     </div>
                     <div className="content">
                       <p>Contact@ info.com</p>
@@ -109,39 +170,28 @@ const ContactUs = () => {
               <div className="contact-social">
                 <ul>
                   <li>
-                    <a
-                      href="#"
-                      aria-label="Facebook"
-                      className="social-icon facebook"
-                    >
-                      <i className="fab fa-facebook-f"></i>
+                    <a href="#" aria-label="Facebook" className="social-icon facebook">
+                      <FontAwesomeIcon icon={faFacebookF} />
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      aria-label="Instagram"
-                      className="social-icon instagram"
-                    >
-                      <i className="fab fa-instagram"></i>
+                    <a href="#" aria-label="Instagram" className="social-icon instagram">
+                      <FontAwesomeIcon icon={faInstagram} />
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      aria-label="LinkedIn"
-                      className="social-icon linkedin"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
+                    <a href="#" aria-label="LinkedIn" className="social-icon linkedin">
+                      <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                   </li>
                 </ul>
               </div>
+
             </div>
           </div>
         </div>
       </section>
-  </div>
+    </div>
   );
 };
 

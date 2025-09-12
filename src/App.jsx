@@ -19,6 +19,7 @@ import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos
 import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShowcase";
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
+import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -100,12 +101,12 @@ const App = () => {
           element={<ShelterHome />} 
         />
         <Route 
-          path="/contact-us" 
-          element={<ContactUs />} 
+          path="/contact" 
+          element={<PetOwnerContact />}
         />
 
       </Routes>
-     <Footer />
+    {location.pathname !== "/" && <Footer />}
       
     </AuthProvider>
 

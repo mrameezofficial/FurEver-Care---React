@@ -338,6 +338,13 @@ body{
    font-weight: 800;
 }
 
+.margin-b-15{
+    margin-bottom: 15px;
+}
+
+.ct-main-body .col-1 {
+    width: 70%;
+}
 
 .services-content-wrapper {
    z-index: 999;
@@ -380,7 +387,7 @@ body{
 .pet-owner-dash-section {
    padding: 25px;
    background-color: antiquewhite;
-   margin-top: 30px;
+   margin-top: 50px;
    border-radius: 10px;
 }
 
@@ -648,8 +655,37 @@ body{
     padding: 0 20px 0 10px;
 }
 
+.footer-container {
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.dashboard.container {
+    padding: 0 20px 60px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+    .contact-info-wrap{
+        padding: 15px !important;
+    }
+
+    .col-3 {
+    padding-left: 0 !important;
+}
+
+    .footer-container .row {
+    flex-direction: column;
+}
+
+    .main-hd {
+    flex-direction: column;
+}
+
+    .ct-main-body .col-1 {
+    width: 100%;
+}
 
     .table-wrapper {
     overflow: auto;
