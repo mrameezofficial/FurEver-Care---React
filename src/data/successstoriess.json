@@ -1,8 +1,15 @@
 [
   {
-    "name": "Bella & Charlie",
-    "text": "Bella found a loving home with Charlie, they are inseparable now!",
-    "image": "https://placekitten.com/300/201"
+    "id": 1,
+    "title": "Bella's New Home",
+    "image": "src/assets/Bella's New Home.jpg",
+    "description": "Bella the cat found her forever home with a loving family."
+  },
+  {
+    "id": 2,
+    "title": "Max’s Happy Life",
+    "image": "src/assets/Max-new-home.jpg",
+    "description": "Max the dog was adopted and now enjoys long walks daily."
   },
   {
     "name": "Max & The Johnsons",
