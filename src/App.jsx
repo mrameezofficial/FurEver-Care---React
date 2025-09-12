@@ -8,16 +8,17 @@ import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import FeedingGuide from "./ components/FeedingGuide";
-import GroomingVideos from "./ components/GroomingVideos";
-import HealthTips from "./ components/HealthTips";
-import TrainingTips from "./ components/TrainingTips";
-import PetProductShowcase from "./ components/PetProductShowcase";
 import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
 import Footer from "./ components/Footer";
 import Contact from "./dashboards/shelter/Contact";
 import ContactUs from "./ components/ContactUs";
+import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
+import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
+import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
+import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShowcase";
+import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
+import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -52,7 +53,7 @@ const App = () => {
         />
         <Route 
           path="/pet-profile"
-          element={<PetOwnerPetProfile/>}
+          element={<PetOwnerPetProfile />}
         />
         <Route 
           path="/feedback"
@@ -72,19 +73,19 @@ const App = () => {
         />
         <Route 
           path="/feeding-guide" 
-          element={<PetOwnerFeedingGuide />}
+          element={<PetOwnerFeedingGuide/>}
         />
         <Route 
           path="/grooming-videos" 
-          element={<PetOwnerGroomingVideos />} 
+          element={<PetOwnerGroomingVideos />}
         />
         <Route 
           path="/health-tips" 
-          element={<PetOwnerHealthTips />} 
+          element={<PetOwnerHealthTips/>} 
         />
         <Route 
           path="/training-tips" 
-          element={<PetOwnerTraningTips/>} 
+          element={<PetOwnerTraningTips/>}
         />
         <Route 
           path="/products" 

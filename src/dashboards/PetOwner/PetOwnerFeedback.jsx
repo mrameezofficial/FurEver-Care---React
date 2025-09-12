@@ -93,7 +93,7 @@ const PetOwnerFeedback = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="feedback-submit-btn bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+                className="feedback-submit-btn"
               >
                 Submit Feedback
               </button>
