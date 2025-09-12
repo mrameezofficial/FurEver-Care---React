@@ -13,8 +13,6 @@ import Contact from "./dashboards/shelter/Contact";
 import ContactUs from "./ components/ContactUs";
 import Scrolling from "./ components/Scrolling";
 import AboutUs from "./ components/AboutUs";
-import VetFormPage from "./dashboards/vartienian/VetFormPage";
-import VetProfilePage from "./dashboards/vartienian/VetProfilePage";
 import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
 import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
 import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
@@ -22,7 +20,10 @@ import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShow
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
-import Header from "./ components/header";
+import VetProfilePage from "./dashboards/Veterinarian/VetProfilePage";
+import VetFormPage from "./dashboards/Veterinarian/VetFormPage";
+import Header from "./ components/Header";
+
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
   const { category } = useAuth();
@@ -44,7 +45,7 @@ const App = () => {
 
     <div>
     <AuthProvider>
-    {location.pathname !== "/" && <Header />}
+    {location.pathname !== "/" && <Header/>}
       <Routes>
         <Route path="/vet-form" element={<VetFormPage />} />
       <Route path="/vet-profile" element={<VetProfilePage />} />
@@ -96,7 +97,6 @@ const App = () => {
           path="/products" 
           element={<PetOwnerProductsShowcase/>}
         />
-
         <Route 
           path="/shelter" 
           element={<ShelterHome />} 
@@ -105,7 +105,14 @@ const App = () => {
           path="/contact" 
           element={<PetOwnerContact />}
         />
-
+        <Route
+         path="/vet-profile"
+         element={<VetProfilePage />}
+        />
+        <Route
+         path="/vet-form"
+         element={<VetFormPage />}
+        />
       </Routes>
     {location.pathname !== "/" && <Footer />}
      <Scrolling />

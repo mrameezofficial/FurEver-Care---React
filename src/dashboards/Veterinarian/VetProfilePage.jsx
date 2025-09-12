@@ -1,18 +1,18 @@
 import React from 'react'
 import Hero from '../../ components/Hero'
-import VetForm from '../../ components/VetForm'
+import VetProfile from '../../ components/VetProfile'
 
-const VetFormPage = () => {
+const VetProfilePage = () => {
   return (
     <div>
-        <Hero pageTitle="Veterinarian Form" />
+      <Hero pageTitle="Vet Profile" />
       <section className="pet-owner-section">
         <div className="container pet-owner-row">
-          <VetForm/>
+          <VetProfile />
         </div>
       </section>
     </div>
   )
 }
 
-export default VetFormPage
+export default VetProfilePage

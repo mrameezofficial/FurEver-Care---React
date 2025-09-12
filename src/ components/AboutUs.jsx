@@ -1,44 +1,21 @@
 import React from "react";
+import { Link } from "react-router";
 
 export default function AboutUs() {
   return (
     <>
-      {/* Slider Section */}
-      <section className="about-slider">
-        <div id="carouselExample" className="about-carousel slide">
-          <div className="about-carousel-inner">
-            <div className="about-carousel-item active about-slid">
-              <img
-                src="../public/breadcrumb_bg.jpg "
-                className="about-d-block about-w-100 "
-                alt="Slider"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="about-caption">
-          <h1>Get Adoption</h1>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="about-hero">
         <div className="about-container">
           <div className="about-row">
             <div className="about-col about-hero-heading">
-              <h1>Meet Adoption</h1>
-              <h2>
-                Work For <span style={{ color: "red" }}>Adoption</span> Happy
-                Time
-              </h2>
+              <h1>Meet FurEver Care</h1>
+              <h2>Happy Moments Start Here</h2>
               <p>
-                The best overall dog DNA test is Embark Breed & Health Kit view
-                at Chewy which pres domesti dog is a sticated descendant.
+                The best overall dog DNA test is Embark Breed & Health Kit. At
+                FurEver Care, we believe every pet deserves a loving home and
+                proper care.
               </p>
-              <div className="about-ui">
-                <p>The domestic dog is a domesticated</p>
-                <p>Embark Breed & Health</p>
-              </div>
             </div>
 
             <div className="about-col about-side-img">
@@ -46,17 +23,17 @@ export default function AboutUs() {
             </div>
 
             <div className="about-col about-right">
-              <div className="about-col about-inner-right">
-                <p>| Dog Adoption</p>
-                <h1>Available for Adoption</h1>
+              <div className=" about-inner-right">
+                <h1>Available Through FurEver Care</h1>
                 <p>
-                  The best overall dog DNA test is Embark Breed & Health Kit
-                  (view at Chewy), which provid dogs
+                  Explore trusted profiles of pets looking for a lifetime of
+                  love. FurEver Care ensures all companions are health-checked
+                  and ready for a new beginning.
                 </p>
                 <div className="about-right-button">
-                  <button type="button" className="about-button-right">
-                    Adopt Here
-                  </button>
+                  <Link to="/contact" className="about-button-right">
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
@@ -69,23 +46,23 @@ export default function AboutUs() {
         <div className="about-container">
           <div className="about-row">
             <div className="about-col about-c1">
-              <h1>75%</h1>
-              <p>dogs are first bred</p>
+              <h1>7 Days</h1>
+              <p>Pets placed within 7 days</p>
             </div>
 
             <div className="about-col about-c1">
-              <h1>259+</h1>
-              <p>Most dogs are first</p>
+              <h1>300+</h1>
+              <p>Families trust FurEver Care</p>
             </div>
 
             <div className="about-col about-c1">
-              <h1>39k</h1>
-              <p>Dog Breeding</p>
+              <h1>50k</h1>
+              <p>Happy tails and lifelong bonds</p>
             </div>
 
             <div className="about-col about-c1">
-              <h1>45+</h1>
-              <p>Years Of History</p>
+              <h1>25+</h1>
+              <p>Years of animal wellness support</p>
             </div>
           </div>
         </div>

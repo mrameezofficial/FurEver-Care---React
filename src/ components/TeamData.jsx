@@ -1,7 +1,7 @@
 import React from "react";
 import teamData from "../data/teamdataz.json"
 
-function Team() {
+function TeamData() {
   return (
     <div>
       <h2 className="team-main-h2">Meet Our Team</h2>
@@ -20,4 +20,4 @@ function Team() {
   );
 }
 
-export default Team;
+export default TeamData;
