@@ -20,7 +20,8 @@ import Footer from "./ components/Footer";
 import ContactUs from "./ components/ContactUs";
 import Scrolling from "./ components/Scrolling";
 import AboutUs from "./ components/AboutUs";
-import VetSection from "./dashboards/VeterinarianNew";
+import VetFormPage from "./dashboards/VetFormPage";
+import VetProfilePage from "./dashboards/VetProfilePage";
 
 
 // Protected Route Component
@@ -46,6 +47,8 @@ const App = () => {
     <AuthProvider>
     {location.pathname !== "/" && <Header />}
       <Routes>
+        <Route path="/vet-form-page" element={<VetFormPage />} />
+      <Route path="/vet-profile-page" element={<VetProfilePage />} />
         <Route 
           path="/" 
           element={<Welcome />} 
@@ -98,11 +101,6 @@ const App = () => {
          <Route 
           path="/vartenian" 
           element={<VartenianHome />} 
-        />
-
-          <Route 
-          path="/vartenian-new" 
-          element={<VetSection/>} 
         />
 
         <Route 
