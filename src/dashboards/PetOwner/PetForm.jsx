@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PetForm = () => {
   const [pet, setPet] = useState({
@@ -10,6 +11,7 @@ const PetForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate(); // ✅ hook for redirection
 
   const validate = () => {
     const newErrors = {};
@@ -53,6 +55,9 @@ const PetForm = () => {
         age: "",
         notes: "",
       });
+
+      // ✅ Redirect to /pet-owner
+      navigate("/pet-owner");
     }
   };
 
@@ -73,7 +78,7 @@ const PetForm = () => {
       <form onSubmit={handleSubmit}>
         {/* Pet Name */}
         <label>
-          Pet Name:
+          Pet Name:*
           <input
             type="text"
             name="name"
@@ -86,7 +91,7 @@ const PetForm = () => {
 
         {/* Species */}
         <label>
-          Species:
+          Species:*
           <select
             name="species"
             value={pet.species}
@@ -104,7 +109,7 @@ const PetForm = () => {
 
         {/* Breed */}
         <label>
-          Breed:
+          Breed:*
           <input
             type="text"
             name="breed"
@@ -116,7 +121,7 @@ const PetForm = () => {
 
         {/* Age */}
         <label>
-          Age:
+          Age:*
           <input
             type="number"
             name="age"

@@ -46,7 +46,7 @@ const App = () => {
           element={<Welcome />} 
         />
         <Route
-          path="/petowner"
+          path="/pet-owner"
           element= {<PetOwnerHome />}
         />
         <Route 
@@ -66,7 +66,7 @@ const App = () => {
           element={<PetOwnerAbout />}
         />
         <Route 
-          path="/form"
+          path="/pet-form"
           element={<PetOwnerForm />}
         />
         <Route 

@@ -13,7 +13,7 @@ export default function HeroSection9() {
  const data= useAuth()
 
   const roles = [
-    { id: "owner", label: "Pet Owner", path: "/petowner" },
+    { id: "owner", label: "Pet Owner", path: "/pet-owner" },
     { id: "vet", label: "Veterinarian", path: "/vartenian" },
     { id: "shelter", label: "Animal Shelter / Rescue Volunteer", path: "/shelter" },
   ];

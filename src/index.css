@@ -559,6 +559,10 @@ body{
     color: #fff;
 }
 
+.feedback-submit-btn:hover{
+    background-color: var(--darkblue);
+}
+
 .form-row {
     margin-bottom: 12px;
 }
@@ -594,8 +598,25 @@ body{
   flex-direction: row;
 }
 
+.header-sec {
+    padding: 0 20px 0 10px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+    .table-wrapper {
+    overflow: auto;
+}
+
+    .product-filter-tabs {
+    gap: 6px;
+}
+
+.product-filter-tabs button {
+    padding: 5px 8px;
+    font-size: 10px;
+}
 
 .welcome-logo img {
         width: 100px;
@@ -651,7 +672,39 @@ body{
 
 @media only screen and (max-width: 768px) {
 
-  .hamburger {
+    .header-btn-col .welcome-user {
+    display: none;
+}
+
+    .pet-profile-col-2 {
+    width: 100%;
+}
+
+    .pet-profile-row {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pet-profile-col-1 {
+    width: 100%;
+}
+
+    .inner-banner {
+    background-color: beige;
+    padding: 40px 20px;
+}
+
+.banner-title {
+    text-align: center;
+    font-size: 30px;
+}
+
+  
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .hamburger {
     display: flex;
   }
 
@@ -668,6 +721,19 @@ body{
   .main-nav li {
     margin: 10px 0;
   }
+
+  .header-nav a {
+    font-size: 11px;
+}
+  
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-nav a,
+    .header-nav button {
+    font-size: 11px;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

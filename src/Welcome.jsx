@@ -18,7 +18,7 @@ const Welcome = () => {
       setCategory(selected);
       setName(username);
 
-      if (selected === "PetOwner") navigate("/petowner");
+      if (selected === "PetOwner") navigate("/pet-owner");
       else if (selected === "Vartenian") navigate("/vartenian");
       else if (selected === "Shelter") navigate("/shelter");
     } else {
