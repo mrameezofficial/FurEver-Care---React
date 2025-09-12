@@ -17,8 +17,11 @@ import PetProductShowcase from "./ components/PetProductShowcase";
 import { useLocation } from "react-router-dom";
 import Header from "./ components/header";
 import Footer from "./ components/Footer";
-import Contact from "./dashboards/shelter/Contact";
 import ContactUs from "./ components/ContactUs";
+import Scrolling from "./ components/Scrolling";
+import AboutUs from "./ components/AboutUs";
+import VetSection from "./dashboards/VeterinarianNew";
+
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -96,6 +99,12 @@ const App = () => {
           path="/vartenian" 
           element={<VartenianHome />} 
         />
+
+          <Route 
+          path="/vartenian-new" 
+          element={<VetSection/>} 
+        />
+
         <Route 
           path="/shelter" 
           element={<ShelterHome />} 
@@ -105,7 +114,13 @@ const App = () => {
           element={<ContactUs />} 
         />
 
+         <Route 
+          path="/about-us" 
+          element={<AboutUs />} 
+        />
+
       </Routes>
+      <Scrolling />
      <Footer />
       
     </AuthProvider>
