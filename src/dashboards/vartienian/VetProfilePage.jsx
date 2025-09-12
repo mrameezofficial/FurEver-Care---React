@@ -11,7 +11,7 @@ export default function VetProfilePage() {
       <div className="p-6">
         <p>No profile data.</p>
         <button
-          onClick={() => navigate("/vet-form-page")}
+          onClick={() => navigate("/vet-form")}
           className="mt-2 px-3 py-1 bg-sky-600 text-white rounded"
         >
           Go Back

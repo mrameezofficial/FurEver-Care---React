@@ -9,7 +9,7 @@ function PetFilter({ setFilter }) {
   ];
 
   return (
-    <div className="flex gap-3">
+    <div className="shelter-filter-tabs">
       {buttons.map(btn => (
         <button
           key={btn.value}

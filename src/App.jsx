@@ -2,7 +2,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Welcome from "./Welcome";
 import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
-import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
@@ -13,9 +12,8 @@ import Footer from "./ components/Footer";
 import ContactUs from "./ components/ContactUs";
 import Scrolling from "./ components/Scrolling";
 import AboutUs from "./ components/AboutUs";
-import VetFormPage from "./dashboards/VetFormPage";
-import VetProfilePage from "./dashboards/VetProfilePage";
-
+import VetFormPage from "./dashboards/vartienian/VetFormPage";
+import VetProfilePage from "./dashboards/vartienian/VetProfilePage";
 import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
 import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
 import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
@@ -47,8 +45,8 @@ const App = () => {
     <AuthProvider>
     {location.pathname !== "/" && <Header />}
       <Routes>
-        <Route path="/vet-form-page" element={<VetFormPage />} />
-      <Route path="/vet-profile-page" element={<VetProfilePage />} />
+        <Route path="/vet-form" element={<VetFormPage />} />
+      <Route path="/vet-profile" element={<VetProfilePage />} />
         <Route 
           path="/" 
           element={<Welcome />} 
@@ -96,10 +94,6 @@ const App = () => {
         <Route 
           path="/products" 
           element={<PetOwnerProductsShowcase/>}
-        />
-         <Route 
-          path="/vartenian" 
-          element={<VartenianHome />} 
         />
 
         <Route 
