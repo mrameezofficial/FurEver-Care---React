@@ -313,3 +313,247 @@ h4.fw-title {
     margin: 0px auto;
     max-width: 1200px;
 }
+
+
+.team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.team-card {
+
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px 40px 20px 40px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f2eb;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-main-h2 {
+
+    text-align: center;
+    font-size: 42px;
+    padding-top: 20px;
+
+}
+
+
+.about-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-row {
+  display: flex;
+}
+
+.about-col {
+  flex: 1;
+}
+
+/* end */
+
+.about-top-header {
+  background-color: #f4f1ea;
+  padding: 10px;
+}
+
+.about-header-nav {
+  padding: 20px;
+}
+
+.about-nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+.about-nav ul li {
+  list-style: none;
+}
+
+.about-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.about-nav ul li a:hover {
+  background-color: rgb(247, 45, 45);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  transition-duration: 0.3s;
+}
+
+.about-button {
+  float: right;
+  background-color: rgb(247, 45, 45);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+}
+
+.about-caption {
+  position: absolute;
+  left: 10%;
+  bottom: 65%;
+  background-color: rgb(247, 45, 45);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.about-caption h1 {
+  font-weight: bold;
+  color: white;
+}
+
+.about-hero {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.about-hero-heading h1 {
+  color: rgb(247, 45, 45);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.about-hero-heading h2 {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.about-hero-heading p {
+  padding: 20px;
+  color: gray;
+}
+
+.about-ui p {
+  color: black;
+}
+
+.about-slid img {
+  width: 120%;
+ background-size: cover;
+  background-position: center;
+}
+
+.about-button-right {
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(247, 45, 45);
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
+
+.about-right-button {
+  padding: 20px;
+}
+
+.about-inner-right {
+  padding: 30px;
+}
+
+.about-right {
+  background-color: rgb(247, 45, 45);
+  border-radius: 5px;
+}
+
+.about-right p {
+  padding: 20px;
+  color: white;
+  font-size: 15px;
+}
+
+.about-right h1 {
+  padding: 20px;
+  color: white;
+  font-size: 40px;
+}
+
+.about-client {
+  padding: 30px;
+  background-color: #f4f1ea;
+}
+
+.about-c1 {
+  border-radius: 10px;
+  background-color: rgb(240, 224, 224);
+  margin: 10px;
+  text-align: center;
+  padding: 40px;
+}
+
+.about-c1 h1 {
+  font-size: 50px;
+}
+
+.about-c1 h1:hover {
+  color: red;
+  transition-duration: 1s;
+}
+
+.about-c1 p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+.team-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+}   
+
+.team-main-h2 {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+.main-hd {
+    display: flex;
+    max-width: 1200px;
+    padding: 80px 20px;
+    gap: 50px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+}
+
+
+
+
+
