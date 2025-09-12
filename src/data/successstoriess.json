@@ -2,13 +2,13 @@
   {
     "id": 1,
     "title": "Bella's New Home",
-    "image": "/images/success1.jpg",
+    "image": "src/assets/Bella's New Home.jpg",
     "description": "Bella the cat found her forever home with a loving family."
   },
   {
     "id": 2,
     "title": "Max’s Happy Life",
-    "image": "/images/success2.jpg",
+    "image": "src/assets/Max-new-home.jpg",
     "description": "Max the dog was adopted and now enjoys long walks daily."
   }
 ]
