@@ -22,7 +22,8 @@ import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
 import VetProfilePage from "./dashboards/Veterinarian/VetProfilePage";
 import VetFormPage from "./dashboards/Veterinarian/VetFormPage";
-import Header from "./components/Header";
+import Header from "./ components/Header";
+
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
   const { category } = useAuth();
@@ -44,7 +45,7 @@ const App = () => {
 
     <div>
     <AuthProvider>
-    {location.pathname !== "/" && <Header />}
+    {location.pathname !== "/" && <Header/>}
       <Routes>
         <Route path="/vet-form" element={<VetFormPage />} />
       <Route path="/vet-profile" element={<VetProfilePage />} />
