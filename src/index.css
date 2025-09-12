@@ -664,6 +664,22 @@ body{
     padding: 0 20px 60px;
 }
 
+.slots-ul li,
+.case-ul > div{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.profile-subtitile {
+    margin: 12px 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.slots-ul li {
+    flex-wrap: wrap;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -753,6 +769,23 @@ body{
 }
 
 @media only screen and (max-width: 768px) {
+    
+    .about-right-button {
+    padding: 20px 0 0;
+}
+
+    .about-right p {
+    padding: 10px 0 0;
+}
+
+    .about-right h1{
+        padding: 0;
+    }
+
+    .about-col {
+    width: 100%;
+    flex: none !important;
+}
 
     .header-btn-col .welcome-user {
     display: none;
@@ -766,6 +799,8 @@ body{
     flex-direction: column;
     gap: 20px;
 }
+
+
 
 .pet-profile-col-1 {
     width: 100%;
@@ -785,6 +820,15 @@ body{
 }
 
 @media only screen and (max-width: 1024px) {
+
+    .about-client {
+    margin-top: 40px;
+}
+
+    .about-col {
+    width: 50%;
+    flex: none;
+}
 
     .hamburger {
     display: flex;

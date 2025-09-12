@@ -2,23 +2,20 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Camera, CheckCircle, XCircle } from "lucide-react";
 
-export default function VetProfilePage() {
+export default function VetProfile() {
   const { state: profile } = useLocation();
   const navigate = useNavigate();
 
-  if (!profile) {
-    return (
-      <div className="p-6">
-        <p>No profile data.</p>
-        <button
-          onClick={() => navigate("/vet-form-page")}
-          className="mt-2 px-3 py-1 bg-sky-600 text-white rounded"
-        >
-          Go Back
-        </button>
-      </div>
-    );
-  }
+  // ✅ Default Dummy Data (when no form submission)
+  const dummyProfile = {
+    name: "Dr. Sarah Johnson",
+    specialization: "Veterinary Surgeon",
+    phone: "+92 300 1234567",
+    email: "sarah.johnson@vetclinic.com",
+    image: null, // no image so fallback Camera icon shows
+  };
+
+  const activeProfile = profile || dummyProfile;
 
   const appointmentSlots = [
     { time: "09:00 AM", status: "booked", patient: "Bella (Dog)" },
@@ -48,16 +45,16 @@ export default function VetProfilePage() {
       {/* Top bar with name */}
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold">Veterinarian Profile</h2>
-        <span className="font-semibold">{profile.name}</span>
+        <span className="font-semibold">{activeProfile.name}</span>
       </div>
 
       {/* Profile Card */}
       <div className="bg-white p-4 rounded-xl shadow flex gap-4">
         <div className="w-32 h-32 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-          {profile.image ? (
+          {activeProfile.image ? (
             <img
-              src={profile.image}
-              alt={profile.name}
+              src={activeProfile.image}
+              alt={activeProfile.name}
               className="w-full h-full object-cover"
             />
           ) : (
@@ -65,18 +62,18 @@ export default function VetProfilePage() {
           )}
         </div>
         <div>
-          <h3 className="text-lg font-semibold">{profile.name}</h3>
-          <p className="text-sm text-gray-600">{profile.specialization}</p>
+          <h3 className="text-lg font-semibold">{activeProfile.name}</h3>
+          <p className="text-sm text-gray-600">{activeProfile.specialization}</p>
           <p className="text-xs text-gray-500">
-            Phone: {profile.phone} | Email: {profile.email}
+            Phone: {activeProfile.phone} | Email: {activeProfile.email}
           </p>
         </div>
       </div>
 
       {/* Appointment Slots */}
       <section>
-        <h4 className="font-medium mb-2">Appointment Slots</h4>
-        <ul className="grid grid-cols-2 gap-3">
+        <h4 className="font-medium mb-2 profile-subtitile">Appointment Slots</h4>
+        <ul className="grid grid-cols-2 gap-3 slots-ul">
           {appointmentSlots.map((s) => (
             <li
               key={s.time}
@@ -102,8 +99,8 @@ export default function VetProfilePage() {
 
       {/* Case Studies */}
       <section>
-        <h4 className="font-medium mb-2">Case Studies</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h4 className="font-medium mb-2 profile-subtitile">Case Studies</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 case-ul">
           {caseStudies.map((c) => (
             <div key={c.id} className="p-3 border rounded-lg">
               <h5 className="font-semibold">{c.title}</h5>

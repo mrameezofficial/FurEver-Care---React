@@ -20,6 +20,7 @@ import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShow
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
+import VetProfilePage from "./dashboards/vartienian/VetProfilePage";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -104,7 +105,10 @@ const App = () => {
           path="/contact" 
           element={<PetOwnerContact />}
         />
-
+        <Route
+         path="/vet-profile"
+         element={<VetProfilePage />}
+        />
       </Routes>
     {location.pathname !== "/" && <Footer />}
       

@@ -365,6 +365,7 @@ h4.fw-title {
 
 .about-row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .about-col {
@@ -427,11 +428,6 @@ h4.fw-title {
 .about-caption h1 {
   font-weight: bold;
   color: white;
-}
-
-.about-hero {
-  padding: 30px;
-  background-color: #fff;
 }
 
 .about-hero-heading h1 {
