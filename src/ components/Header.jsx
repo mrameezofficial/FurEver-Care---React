@@ -1,131 +1,128 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import logo from "../assets/furever-care-logo.jpg";
 import VisitorCounter from "./visitorcounter";
 import RealTimeClock from "./clock";
 import { useAuth } from "../context/AuthContext";
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [userName, setUserName] = useState("");
-  const asdasd = useAuth();
-  console.log(asdasd);
+  const auth = useAuth();
+
   useEffect(() => {
-    // Get stored name when header loads
     const storedName = localStorage.getItem("userName");
-    if (storedName) {
-      setUserName(storedName);
-    }
+    if (storedName) setUserName(storedName);
   }, []);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <div>
-      <div className="topbar">
-        <div className="container">
-          <div className="col1">
-            <VisitorCounter />
-          </div>
-          <div className="col2">
-            <RealTimeClock />
-          </div>
+      {/* Topbar */}
+      <div className="topbar bg-gray-100 py-2 shadow-sm">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <VisitorCounter />
+          <RealTimeClock />
         </div>
       </div>
-      <div className="header">
-        <div className="container">
-          <div className="row">
-            {/* Logo */}
-            <div className="col logo">
-              <Link to="/">
-                <img src={logo} alt="FurEver Care Logo" width="120px" />
-              </Link>
+
+      {/* Header */}
+      <header className="bg-white shadow-md relative z-50">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/">
+            <img src={logo} alt="FurEver Care Logo" className="w-28" />
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex space-x-6 items-center">
+            <Link to="/">Home</Link>
+            <Link to="/about">About Us</Link>
+
+            <div className="relative group">
+              <button className="cursor-pointer">Pet Care Sections ▾</button>
+              <ul className="absolute hidden group-hover:block bg-white border mt-1 py-2 px-4 shadow-md">
+                <li><Link to="/pet-profile" className="block py-1">Pet Profile</Link></li>
+                <li><Link to="/feeding-guide" className="block py-1">Feeding Guide</Link></li>
+                <li><Link to="/grooming-videos" className="block py-1">Grooming Videos</Link></li>
+                <li><Link to="/health-tips" className="block py-1">Health Tips</Link></li>
+                <li><Link to="/training-tips" className="block py-1">Training Tips</Link></li>
+              </ul>
             </div>
 
-            {/* Navigation */}
-            <div className="col navbar">
-              <nav>
-                <ul className="main-nav">
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-
-                  <li>
-                    <Link to="/about">About Us</Link>
-                  </li>
-
-                  {/* Pet Care Sections Dropdown */}
-                  <li className="dropdown">
-                    <span>Pet Care Sections ▾</span>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link to="/pet-profile">Pet Profile</Link>
-                      </li>
-                      <li>
-                        <Link to="/feeding-guide">Feeding Guide</Link>
-                      </li>
-                      <li>
-                        <Link to="/grooming-videos">Grooming Videos</Link>
-                      </li>
-                      <li>
-                        <Link to="/health-tips">Health Tips</Link>
-                      </li>
-                      <li>
-                        <Link to="/training-tips">Training Tips</Link>
-                      </li>
-                    </ul>
-                  </li>
-
-                  {/* Product Showcase Dropdown */}
-                  <li className="dropdown">
-                    <span>Pet Product Showcase ▾</span>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link to="/product/dog-cat-food">Dog/Cat Food</Link>
-                      </li>
-                      <li>
-                        <Link to="/product/toys">Toys</Link>
-                      </li>
-                      <li>
-                        <Link to="/product/grooming">Grooming Essentials</Link>
-                      </li>
-                      <li>
-                        <Link to="/product/bedding">Bedding & Apparel</Link>
-                      </li>
-                      <li>
-                        <Link to="/product/health">Health Supplements</Link>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <Link to="/vet-help">Emergency & Vet Help</Link>
-                  </li>
-                  <li>
-                    <Link to="/feedback">Feedback</Link>
-                  </li>
-                  <li>
-                    <Link to="/contact">Contact Us</Link>
-                  </li>
-                </ul>
-              </nav>
+            <div className="relative group">
+              <button className="cursor-pointer">Pet Product Showcase ▾</button>
+              <ul className="absolute hidden group-hover:block bg-white border mt-1 py-2 px-4 shadow-md">
+                <li><Link to="/product/dog-cat-food" className="block py-1">Dog/Cat Food</Link></li>
+                <li><Link to="/product/toys" className="block py-1">Toys</Link></li>
+                <li><Link to="/product/grooming" className="block py-1">Grooming Essentials</Link></li>
+                <li><Link to="/product/bedding" className="block py-1">Bedding & Apparel</Link></li>
+                <li><Link to="/product/health" className="block py-1">Health Supplements</Link></li>
+              </ul>
             </div>
 
-            {/* User Greeting & CTA */}
-            {userName && (
-              <div className="col user-name">
-                <span>Welcome, {userName}</span>
+            <Link to="/vet-help">Emergency & Vet Help</Link>
+            <Link to="/feedback">Feedback</Link>
+            <Link to="/contact">Contact Us</Link>
+            <span className="ml-4 font-semibold text-blue-700">Welcome, {auth?.userName || userName}</span>
+            <Link to="/" className="ml-2 bg-red-500 text-white px-4 py-1 rounded">Adopt Here</Link>
+          </nav>
+
+          {/* Hamburger (Mobile) */}
+          <button onClick={toggleMenu} className="md:hidden text-3xl focus:outline-none">
+            ☰
+          </button>
+        </div>
+
+        {/* Off-canvas Mobile Menu */}
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={closeMenu}>
+            <div
+              className="bg-white w-72 h-full p-6 absolute top-0 left-0 overflow-y-auto shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <img src={logo} alt="FurEver Logo" className="w-20" />
+                <button onClick={closeMenu} className="text-xl">✕</button>
               </div>
-            )}
+              <div className="space-y-4">
+                <Link to="/" onClick={closeMenu}>Home</Link>
+                <Link to="/about" onClick={closeMenu}>About Us</Link>
 
-            <div className="col header-col">
-              <Link to="/" type="button" className="button">
-                Adopt Here
-              </Link>
-              <div className="profile-greeting">
-                <h4 className="profile-greet">Welcome!</h4>
-                <h3 className="profile-name">{asdasd?.userName}</h3>
+                <details>
+                  <summary className="cursor-pointer">Pet Care Sections ▾</summary>
+                  <ul className="ml-4 mt-2 space-y-1">
+                    <li><Link to="/pet-profile" onClick={closeMenu}>Pet Profile</Link></li>
+                    <li><Link to="/feeding-guide" onClick={closeMenu}>Feeding Guide</Link></li>
+                    <li><Link to="/grooming-videos" onClick={closeMenu}>Grooming Videos</Link></li>
+                    <li><Link to="/health-tips" onClick={closeMenu}>Health Tips</Link></li>
+                    <li><Link to="/training-tips" onClick={closeMenu}>Training Tips</Link></li>
+                  </ul>
+                </details>
+
+                <details>
+                  <summary className="cursor-pointer">Pet Product Showcase ▾</summary>
+                  <ul className="ml-4 mt-2 space-y-1">
+                    <li><Link to="/product/dog-cat-food" onClick={closeMenu}>Dog/Cat Food</Link></li>
+                    <li><Link to="/product/toys" onClick={closeMenu}>Toys</Link></li>
+                    <li><Link to="/product/grooming" onClick={closeMenu}>Grooming Essentials</Link></li>
+                    <li><Link to="/product/bedding" onClick={closeMenu}>Bedding & Apparel</Link></li>
+                    <li><Link to="/product/health" onClick={closeMenu}>Health Supplements</Link></li>
+                  </ul>
+                </details>
+
+                <Link to="/vet-help" onClick={closeMenu}>Emergency & Vet Help</Link>
+                <Link to="/feedback" onClick={closeMenu}>Feedback</Link>
+                <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
+                <div className="text-blue-600 font-semibold">Welcome, {auth?.userName || userName}</div>
+                <Link to="/" className="block bg-red-500 text-white text-center py-2 rounded" onClick={closeMenu}>Adopt Here</Link>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        )}
+      </header>
     </div>
   );
 }
