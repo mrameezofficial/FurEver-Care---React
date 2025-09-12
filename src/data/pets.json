@@ -4,27 +4,27 @@
     "name": "Buddy",
     "age": "2 years",
     "breed": "Golden Retriever",
-    "type": "dog",
-    "description": "Friendly and energetic, loves children.",
-    "image": "https://placedog.net/300/200?id=1"
+    "type": "Dog",
+    "image": "src/assets/pets/Buddy.jpg",
+    "description": "A friendly and playful dog who loves kids."
   },
   {
     "id": 2,
     "name": "Whiskers",
     "age": "1 year",
-    "breed": "Siamese",
-    "type": "cat",
-    "description": "Calm and affectionate, enjoys naps.",
-    "image": "https://placekitten.com/300/200"
+    "breed": "Persian Cat",
+    "type": "Cat",
+    "image": "src/assets/pets/Mittens.jpg",
+    "description": "A calm cat who enjoys cuddles."
   },
   {
     "id": 3,
     "name": "Thumper",
     "age": "6 months",
-    "breed": "Rabbit",
-    "type": "rabbit",
-    "description": "Curious and playful, loves carrots.",
-    "image": "https://placebear.com/300/200"
+    "breed": "Dutch Rabbit",
+    "type": "Rabbit",
+    "image": "src/assets/pets/Thumper.jpg",
+    "description": "A cute bunny with lots of energy."
   },
   {
     "id": 4,

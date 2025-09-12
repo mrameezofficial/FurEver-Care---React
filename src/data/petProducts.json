@@ -4,7 +4,7 @@
     "name": "Organic Dog Shampoo",
     "description": "Gentle, natural shampoo for sensitive skin.",
     "price": "₨950",
-    "image": "/assets/products/dog-shampoo.jpg",
+    "image": "src/assets/products/organic-dog-shampoo.jpg",
     "category": "Grooming Essentials"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Interactive Cat Toy",
     "description": "Battery-powered mouse toy that encourages play.",
     "price": "₨1200",
-    "image": "/assets/products/cat-toy.jpg",
+    "image": "src/assets/products/Interactive-Cat-Toy.jpg",
     "category": "Toys"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Dog Bed & Blanket",
     "description": "Cozy bedding for small to medium dogs.",
     "price": "₨2300",
-    "image": "/assets/products/dog-bed.jpg",
+    "image": "src/assets/products/Dog-Bed-&-Blanket.jpg",
     "category": "Bedding and Apparel"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Calcium Chew Tablets",
     "description": "Supports joint and bone health in adult dogs.",
     "price": "₨600",
-    "image": "../../src/assets/products/dog-food.jpg",
+    "image": "src/assets/products/calcium.jpg",
     "category": "Health Supplements"
   }
 ]

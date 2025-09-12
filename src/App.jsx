@@ -9,6 +9,7 @@ import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
 import { useLocation } from "react-router-dom";
 import Footer from "./ components/Footer";
+import Contact from "./dashboards/shelter/Contact";
 import ContactUs from "./ components/ContactUs";
 import Scrolling from "./ components/Scrolling";
 import AboutUs from "./ components/AboutUs";
@@ -105,13 +106,8 @@ const App = () => {
           element={<PetOwnerContact />}
         />
 
-         <Route 
-          path="/about-us" 
-          element={<AboutUs />} 
-        />
-
       </Routes>
-     <Footer />
+    {location.pathname !== "/" && <Footer />}
      <Scrolling />
       
     </AuthProvider>
