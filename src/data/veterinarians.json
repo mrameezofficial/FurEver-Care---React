@@ -4,7 +4,7 @@
     "name": "Dr. Sarah Johnson",
     "specialization": "Small Animals",
     "contact": "sarah.johnson@vetclinic.com | +1 (555) 123-4567",
-    "image": "/images/sarah.jpg",
+    "image": "src/assets/Dr. Sarah Johnson.jpg",
     "timeSlots": [
       { "time": "09:00 AM - 10:00 AM", "status": "Available" },
       { "time": "10:00 AM - 11:00 AM", "status": "Booked" },
