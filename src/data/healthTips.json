@@ -4,13 +4,13 @@
       "title": "Oral Care",
       "type": "video",
       "description": "Brush your dog's teeth 2-3 times a week.",
-      "url": "https://www.youtube.com/embed/dog_oral_care_video"
+      "url": "https://www.youtube.com/embed/lmvXQhwXXNU?si=SKOR57QFupGzRJNW"
     },
     {
       "title": "Weight Management",
       "type": "audio",
       "description": "Tips on maintaining a healthy weight for your dog.",
-      "url": "https://example.com/audio/dog_weight.mp3"
+      "url": "https://www.youtube.com/embed/6b0U3P4MfFE?si=2vKAGYhlEi9N6f_D"
     }
   ],
   "cats": [
@@ -18,13 +18,13 @@
       "title": "Oral Care",
       "type": "video",
       "description": "How to clean your cat’s teeth safely.",
-      "url": "https://www.youtube.com/embed/cat_oral_care_video"
+      "url": "https://www.youtube.com/embed/EyoAKnlIDp4?si=mp4DjFrFVwz7wJVR"
     },
     {
       "title": "Common Conditions",
       "type": "audio",
       "description": "Recognize signs of common cat illnesses.",
-      "url": "https://example.com/audio/cat_conditions.mp3"
+      "url": "https://www.youtube.com/embed/csYlqpyZ7kg?si=SZCZyV61I_0zuDZ8"
     }
   ]
 }
