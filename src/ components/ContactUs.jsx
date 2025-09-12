@@ -131,12 +131,12 @@ const ContactUs = () => {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="col-2">
-            <div className="contact-info-wrap">
-              <div className="contact-img">
-                <img src="../public/contact_img.png" alt="Contact Illustration" />
-              </div>
+                    {/* Right Column */}
+                    <div className="col-2">
+                        <div className="contact-info-wrap">
+                            <div className="contact-img">
+                                <img src="../public/contact_img.png" alt="Contact Illustration" />
+                            </div>
 
               <div>
                 <ul className="contact-info-list">

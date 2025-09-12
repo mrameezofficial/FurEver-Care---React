@@ -7,11 +7,12 @@ import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
 import Footer from "./ components/Footer";
 import Contact from "./dashboards/shelter/Contact";
 import ContactUs from "./ components/ContactUs";
+import Scrolling from "./ components/Scrolling";
+import AboutUs from "./ components/AboutUs";
 import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
 import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
 import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
@@ -21,7 +22,7 @@ import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
 import VetProfilePage from "./dashboards/Veterinarian/VetProfilePage";
 import VetFormPage from "./dashboards/Veterinarian/VetFormPage";
-
+import Header from "./components/Header";
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
   const { category } = useAuth();
@@ -45,6 +46,8 @@ const App = () => {
     <AuthProvider>
     {location.pathname !== "/" && <Header />}
       <Routes>
+        <Route path="/vet-form" element={<VetFormPage />} />
+      <Route path="/vet-profile" element={<VetProfilePage />} />
         <Route 
           path="/" 
           element={<Welcome />} 
@@ -111,6 +114,7 @@ const App = () => {
         />
       </Routes>
     {location.pathname !== "/" && <Footer />}
+     <Scrolling />
       
     </AuthProvider>
 

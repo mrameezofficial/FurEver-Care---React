@@ -6,6 +6,7 @@ export default function VetProfile() {
   const { state: profile } = useLocation();
   const navigate = useNavigate();
 
+<<<<<<<< HEAD:src/ components/VetProfile.jsx
   // ✅ Default Dummy Data (when no form submission)
   const dummyProfile = {
     name: "Dr. Sarah Johnson",
@@ -16,6 +17,21 @@ export default function VetProfile() {
   };
 
   const activeProfile = profile || dummyProfile;
+========
+  if (!profile) {
+    return (
+      <div className="p-6">
+        <p>No profile data.</p>
+        <button
+          onClick={() => navigate("/vet-form")}
+          className="mt-2 px-3 py-1 bg-sky-600 text-white rounded"
+        >
+          Go Back
+        </button>
+      </div>
+    );
+  }
+>>>>>>>> origin/zarshan:src/dashboards/vartienian/VetProfilePage.jsx
 
   const appointmentSlots = [
     { time: "09:00 AM", status: "booked", patient: "Bella (Dog)" },

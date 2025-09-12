@@ -1,35 +1,18 @@
-import React, { useState } from "react";
-import petsData from "../../data/pets.json";
-import eventsData from "../../data/zevents.json"
-import storiesData from "../../data/successstoriess.json";
+import React from 'react'
+import Hero from '../../ components/Hero'
+import ShelterHome from '../../ components/ShelterHomeComp'
 
-import Gallery from "../../dashboards/shelter/Gallery";
-import SuccessStories from "../../dashboards/shelter/SuccessStories";
-import Events from "../../dashboards/shelter/Events";
-import Contact from "../../dashboards/shelter/Contact";
-import AnimalShelterNavbar from "./AnimalShelterNav";
-
-
-function ShelterHome() {
-  const [filter, setFilter] = useState("all");
-
+const ShelterHomeComp = () => {
   return (
-    <>
-    <AnimalShelterNavbar />
-    <div className="font-sans bg-gray-50 min-h-screen">
-      <header className="bg-orange-500 text-white py-6 text-center shadow-md">
-        <h1 className="text-3xl font-bold">🐾 Animal Shelter</h1>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-4 py-8 space-y-12">
-        <Gallery pets={petsData} filter={filter} setFilter={setFilter} />
-        <SuccessStories stories={storiesData} />
-        <Events events={eventsData} />
-        <Contact />
-      </main>
+    <div>
+        <Hero pageTitle="Animal Shelter" />
+      <section className="pet-owner-section">
+        <div className="container pet-owner-row">
+          <ShelterHome/>
+        </div>
+      </section>
     </div>
-    </>
-  );
+  )
 }
 
-export default ShelterHome;
+export default ShelterHomeComp
