@@ -8,7 +8,6 @@ import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import PetProductShowcase from "./ components/PetProductShowcase";
 import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
 import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
@@ -16,6 +15,7 @@ import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
 import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
+import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShowcase";
 
 
 // Protected Route Component
@@ -87,7 +87,7 @@ const App = () => {
         />
         <Route 
           path="/products" 
-          element={<PetProductShowcase />} 
+          element={<PetOwnerProductsShowcase/>}
         />
          <Route 
           path="/vartenian" 

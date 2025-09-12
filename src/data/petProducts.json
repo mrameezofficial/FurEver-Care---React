@@ -20,7 +20,7 @@
     "name": "Grain-Free Puppy Food",
     "description": "High-protein puppy kibble with real chicken.",
     "price": "₨1850",
-    "image": "/assets/products/puppy-food.jpg",
+    "image": "../../src/assets/products/dog-food.jpg",
     "category": "Dog/Cat Food"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Calcium Chew Tablets",
     "description": "Supports joint and bone health in adult dogs.",
     "price": "₨600",
-    "image": "/assets/products/chew-tabs.jpg",
+    "image": "../../src/assets/products/dog-food.jpg",
     "category": "Health Supplements"
   }
 ]

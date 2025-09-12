@@ -17,10 +17,10 @@ const PetProductShowcase = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">🛍️ Pet Product Showcase</h1>
+      <h2 className="text-3xl font-bold mb-4 product-showcase-title">Pet Product Showcase</h2>
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-4 mb-6">
+      <div className="flex flex-wrap gap-4 mb-6 product-filter-tabs">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -37,16 +37,16 @@ const PetProductShowcase = () => {
       {/* Search */}
       <input
         type="text"
-        placeholder="🔍 Search products..."
+        placeholder="Search products..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full mb-6 px-4 py-2 border rounded"
+        className="w-full mb-6 px-4 py-2 border rounded product-search"
       />
 
       {/* Products */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="bg-white shadow-md rounded p-4 border">
+          <div key={product.id} className="bg-white shadow-md rounded p-4 border product-card">
             <img
               src={product.image}
               alt={product.name}
