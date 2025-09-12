@@ -8,14 +8,14 @@ import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
 import PetOwnerAbout from "./dashboards/PetOwner/PetOwnerAbout";
 import PetOwnerForm from "./dashboards/PetOwner/PetOwnerForm";
-import GroomingVideos from "./ components/GroomingVideos";
-import HealthTips from "./ components/HealthTips";
-import TrainingTips from "./ components/TrainingTips";
 import PetProductShowcase from "./ components/PetProductShowcase";
-import Header from "./ components/header";
+import Header from "./ components/Header";
 import { useLocation } from "react-router-dom";
 import PetOwnerPetProfile from "./dashboards/PetOwner/PetOwnerPetProfile";
 import PetOwnerFeedingGuide from "./dashboards/PetOwner/PetOwnerFeedingGuide";
+import PetOwnerGroomingVideos from "./dashboards/PetOwner/PetOwnerGroomingVideos";
+import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
+import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 
 
 // Protected Route Component
@@ -49,7 +49,6 @@ const App = () => {
           path="/petowner"
           element= {<PetOwnerHome />}
         />
-      
         <Route 
           path="/pet-profile"
           element={<PetOwnerPetProfile/>}
@@ -76,15 +75,15 @@ const App = () => {
         />
         <Route 
           path="/grooming-videos" 
-          element={<GroomingVideos />} 
+          element={<PetOwnerGroomingVideos />} 
         />
         <Route 
           path="/health-tips" 
-          element={<HealthTips />} 
+          element={<PetOwnerHealthTips />} 
         />
         <Route 
-          path="/tranning-tips" 
-          element={<TrainingTips />} 
+          path="/training-tips" 
+          element={<PetOwnerTraningTips/>} 
         />
         <Route 
           path="/products" 

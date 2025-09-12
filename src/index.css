@@ -25,11 +25,15 @@ body{
     font-family: "Inter Tight", sans-serif;
 }
 
-
 .feedback-form {
     padding: 30px;
-    background-color: #443941;
+    background-color: #f3f3f3;
     border-radius: 18px;
+    width: 660px;
+}
+
+.feedback-section .row {
+    justify-content: center;
 }
 
 .welcome-hero {
@@ -197,7 +201,7 @@ body{
     background-color: #f5f1eb63;
     padding: 20px;
     position: absolute;
-    z-index: 999 !important;
+    z-index: 9 !important;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -207,8 +211,28 @@ body{
 
 .welcome-logo {
     position: absolute;
-    z-index: 9999;
+    z-index: 9;
     left: 30px;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--darkblue);
+}
+
+.popup-btn {
+    width: 100%;
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    background-color: var(--darkblue);
 }
 
 .welcome-hero h1 {
@@ -439,4 +463,138 @@ body{
 .topbar .container {
     display: flex;
     justify-content: space-between;
+}
+
+.feedback-submit-btn {
+    padding: 10px;
+    background-color: var(--red);
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row textarea {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid #b8b8b8;
+}
+
+.landing-page-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+/* Basic Responsive Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+.welcome-logo img {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+.welcome-hero h1 {
+    font-size: 24px !important;
+}
+
+.welcome-hero h3 {
+    font-size: 14px;
+}
+
+.welcome-service-col h3 {
+    font-size: 24px;
+}
+
+    .welcome-logo {
+        position: relative;
+        left: 0;
+    }
+
+        .welcome-hero {
+        padding: 0 15px 15px;
+        position: relative;
+        left: unset;
+        transform: translateX(0);
+        background-color: #fff;
+    }
+
+    .landing-page-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: calc(100vh - 193px);
+    }
+
+    .services-btn {
+    padding: 7px 16px !important;
+    font-size: 12px;
+}
+
+.welcome-service-col.shelter {
+    grid-column: span 2;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+  
+  .main-nav li {
+    margin: 10px 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

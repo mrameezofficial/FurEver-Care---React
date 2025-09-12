@@ -45,7 +45,7 @@ data.setName(name)
   }, [expanded, selectedRole, navigate]);
 
   return (
-    <div className="h-screen w-screen flex ">
+    <div className="landing-page-section">
       {/* buttons selection */}
       {roles.map((role) => (
         <motion.button
@@ -121,7 +121,7 @@ data.setName(name)
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <h2 className="text-2xl font-bold mb-6 text-center text-teal-700">
+                    <h2 className="popup-title">
                       Welcome {selectedRole?.label}
                     </h2>
                     <input
@@ -129,11 +129,12 @@ data.setName(name)
                       placeholder="Enter your name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
+                      required
                       className="w-full border rounded-lg px-4 py-2 mb-4"
                     />
                     <button
                       onClick={handleSubmit}
-                      className="w-full py-2 rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
+                      className="popup-btn"
                     >
                       Continue
                     </button>
