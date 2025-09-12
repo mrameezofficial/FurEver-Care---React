@@ -16,5 +16,5 @@
     "contact": "0321-1234567",
     "email": "ayesha@example.com"
   },
-  "avatarUrl": "../src/assets/rescue-volunteer-img.jpg"
+  "avatarUrl": "../../src/assets/rescue-volunteer-img.jpg"
 }

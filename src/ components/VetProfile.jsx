@@ -12,7 +12,7 @@ export default function VetProfile() {
     specialization: "Veterinary Surgeon",
     phone: "+92 300 1234567",
     email: "sarah.johnson@vetclinic.com",
-    image: null, // no image so fallback Camera icon shows
+    image: "src/assets/sarah-johnson-img.jpg", // no image so fallback Camera icon shows
   };
 
   const activeProfile = profile || dummyProfile;

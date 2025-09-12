@@ -14,7 +14,7 @@ export default function HeroSection9() {
 
   const roles = [
     { id: "owner", label: "Pet Owner", path: "/pet-owner" },
-    { id: "vet", label: "Veterinarian", path: "/vartenian" },
+    { id: "vet", label: "Veterinarian", path: "/vet-form" },
     { id: "shelter", label: "Animal Shelter / Rescue Volunteer", path: "/shelter" },
   ];
 

@@ -2,7 +2,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Welcome from "./Welcome";
 import PetOwnerHome from "./dashboards/PetOwner/PetOwnerHome";
 import ShelterHome from "./dashboards/shelter/ShelterHome";
-import VartenianHome from "./dashboards/vartienian/VartenianHome";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import PetOwnerFeedback from "./dashboards/PetOwner/PetOwnerFeedback";
 import PetOwnerVetHelp from "./dashboards/PetOwner/PetOwnerVetHelp";
@@ -20,7 +19,8 @@ import PetOwnerProductsShowcase from "./dashboards/PetOwner/PetOwnerProductsShow
 import PetOwnerHealthTips from "./dashboards/PetOwner/PetOwnerHealthTips";
 import PetOwnerTraningTips from "./dashboards/PetOwner/PetOwnerTrainingTips";
 import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
-import VetProfilePage from "./dashboards/vartienian/VetProfilePage";
+import VetProfilePage from "./dashboards/Veterinarian/VetProfilePage";
+import VetFormPage from "./dashboards/Veterinarian/VetFormPage";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -93,10 +93,6 @@ const App = () => {
           path="/products" 
           element={<PetOwnerProductsShowcase/>}
         />
-         <Route 
-          path="/vartenian" 
-          element={<VartenianHome />} 
-        />
         <Route 
           path="/shelter" 
           element={<ShelterHome />} 
@@ -108,6 +104,10 @@ const App = () => {
         <Route
          path="/vet-profile"
          element={<VetProfilePage />}
+        />
+        <Route
+         path="/vet-form"
+         element={<VetFormPage />}
         />
       </Routes>
     {location.pathname !== "/" && <Footer />}
