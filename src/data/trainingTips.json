@@ -8,8 +8,9 @@
     },
     {
       "title": "House Training",
-      "type": "text",
-      "description": "Use positive reinforcement and a regular schedule to housetrain puppies."
+      "type": "video",
+      "description": "Use positive reinforcement and a regular schedule to housetrain puppies.",
+      "url": "https://www.youtube.com/embed/gZ0XEr4DGfs?si=u-LQpIT1tP_Pf9zx"
     }
   ],
   "cats": [
@@ -21,8 +22,9 @@
     },
     {
       "title": "Discouraging Scratching",
-      "type": "text",
-      "description": "Provide scratching posts and use deterrents for unwanted scratching behavior."
+      "type": "video",
+      "description": "Provide scratching posts and use deterrents for unwanted scratching behavior.",
+      "url": "https://www.youtube.com/embed/HI7zIFMok9g?si=JuVmf4Y3PiJmtH0V"
     } 
   ]
 }
