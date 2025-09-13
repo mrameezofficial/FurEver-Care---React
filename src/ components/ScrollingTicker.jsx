@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import RealTimeClock from "./clock";
-import VisitorCounter from "./visitorcounter";
+import React, { useEffect, useRef, useState } from "react";
+
 
 export default function ScrollingTicker({ updates = [], speed = 15 }) {
   const [isPaused, setIsPaused] = useState(false);
@@ -58,10 +57,20 @@ export default function ScrollingTicker({ updates = [], speed = 15 }) {
           </div>
         </div>
 
-        <div style={{ flex: "0 0 auto", fontSize: 16 }}>
-          {new Date().toLocaleDateString()}
-        </div>
-      </div>
+
+     {/* Fixed Right */}
+     <div
+       style={{
+         flex: "0 0 auto",
+         fontWeight: "bold",
+         padding: "4px 10px",
+         borderRadius: 4,
+         background: "rgba(255,255,255,0.1)",
+       }}
+     >
+       👥 Visitors: {visitorCount}
+     </div>
+
 
       <style>{`
         @keyframes marquee {
