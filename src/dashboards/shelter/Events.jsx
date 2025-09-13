@@ -1,23 +1,31 @@
 import React from "react";
+import eventsData from "../../data/zevents.json"; 
 
-function Events({ events }) {
+export default function Events() {
+  // Ensure it's always an array
+  const events = Array.isArray(eventsData) ? eventsData : [];
+
+  if (!events.length) {
+    return <p className="p-6">No events available.</p>;
+  }
+
   return (
-    <section>
-      <h2 className="text-3xl font-bold mb-4 text-gray-800 pt-[20vw] shltr-hd2">Upcoming Events</h2>
-      <div className="shltr-event-hd">
-        {events.map(event => (
-          <div
+    <div className="max-w-4xl mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-6 text-teal-700">Upcoming Events</h2>
+      <ul className="space-y-4">
+        {events.map((event) => (
+          <li
             key={event.id}
-            className="shltr-event-h2"
+            className="p-4 border rounded-lg shadow hover:shadow-md transition"
           >
-            <h3 className="pt-4 text-xl font-semibold">{event.title}</h3>
-            <p className="text-gray-600">{event.date}</p>
-            <p className="text-gray-600">{event.details}</p>
-          </div>
+            <h3 className="text-xl font-semibold">{event.title}</h3>
+            <p className="text-sm text-gray-600">
+              📅 {event.date} | 📍 {event.location}
+            </p>
+            <p className="mt-2 text-gray-700">{event.description}</p>
+          </li>
         ))}
-      </div>
-    </section>
+      </ul>
+    </div>
   );
 }
-
-export default Events;

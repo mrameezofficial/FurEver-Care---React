@@ -13,7 +13,5 @@ const ShltSuccessStories = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
-
-export default ShltSuccessStories

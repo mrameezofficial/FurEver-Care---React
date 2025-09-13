@@ -26,6 +26,7 @@ import Header from "./ components/Header";
 import Gallery from "./dashboards/shelter/Gallery";
 import SuccessStories from "./ components/ShltSuccessStories";
 import ShltSuccessStories from "./dashboards/shelter/SuccessStories";
+import Events from "./dashboards/shelter/Events";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -59,7 +60,7 @@ const App = () => {
           element={<Welcome />} 
         />
         <Route
-          path="/pet-owner"
+          path="/owner"
           element= {<PetOwnerHome />}
         />
         <Route 
@@ -104,10 +105,14 @@ const App = () => {
         />
         <Route 
           path="/shelter" 
-          element={<ShelterHome />} 
+          element={<Gallery />} 
         />
         <Route 
-          path="/animal-gallery" 
+          path="/events" 
+          element={<Events />} 
+        />
+        <Route 
+          path="/ho" 
           element={<Gallery /> } 
         />
         <Route 
@@ -119,7 +124,7 @@ const App = () => {
           element={<PetOwnerContact />}
         />
         <Route
-         path="/vet-profile"
+         path="/vet"
          element={<VetProfilePage />}
         />
         <Route
