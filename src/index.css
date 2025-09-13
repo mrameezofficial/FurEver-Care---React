@@ -465,6 +465,7 @@ body{
     padding: 10px;
     border-radius: 10px;
     border-color: #eee;
+    min-width: 200px;
 }
 
 .main-nav {
@@ -673,6 +674,15 @@ body{
 
 .slots-ul li {
     flex-wrap: wrap;
+}
+
+.popup div button {
+    background-color: var(--red);
+    padding: 10px;
+}
+
+.popup div button:hover {
+    background-color: var(--darkblue);
 }
 
 /* Extra small devices (phones, 600px and down) */

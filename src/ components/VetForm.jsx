@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Camera } from "lucide-react";
 
-export default function VetFormPage() {
+export default function VetForm() {
   const [form, setForm] = useState({
     name: "",
     specialization: "",
@@ -13,22 +13,25 @@ export default function VetFormPage() {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
-  function handleChange(e) {
+  // Prevent numbers in Name field
+  const handleNameKeyDown = (e) => {
+    if (/\d/.test(e.key)) e.preventDefault();
+  };
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-  }
+  };
 
-  function handleImageChange(e) {
+  const handleImageChange = (e) => {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = (ev) => setImagePreview(ev.target.result);
     reader.readAsDataURL(file);
-  }
+  };
 
-  function isValidEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
-  }
+  const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -37,76 +40,140 @@ export default function VetFormPage() {
     if (!form.specialization.trim()) return alert("Please enter specialization.");
     if (!form.phone.trim()) return alert("Please enter a phone number.");
     if (!form.email.trim() || !isValidEmail(form.email))
-      return alert("Please enter a valid email.");
-    if (!imagePreview) return alert("Please upload a profile image.");
+      newErrors.email = "Valid email is required.";
+    if (!imagePreview) newErrors.image = "Profile image is required.";
 
-    // All validations passed → move to profile page
-    navigate("/vet-profile", { state: { ...form, image: imagePreview } });
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    // All validations passed → navigate
+    navigate("/vet-profile-page", { state: { ...form, image: imagePreview } });
+  };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
-      <h2 className="text-2xl font-bold">Enter Veterinarian Info</h2>
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4 bg-white p-4 rounded-xl shadow"
-      >
-        <input
-          name="name"
-          placeholder="Full Name"
-          value={form.name}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        />
-        <input
-          name="specialization"
-          placeholder="Specialization"
-          value={form.specialization}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        />
-        <input
-          name="phone"
-          placeholder="Phone"
-          value={form.phone}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        />
-        <input
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        />
+    <div className="ct-main-body">
+      <section>
+        <div className="main-hd">
+          <div className="col-1">
+            <div className="contact-title">
+              <h5 className="sub-title">Veterinarian Registration</h5>
+              <h2 className="titles">
+                Enter Vet Details<span className="exclimation">.</span>
+              </h2>
+            </div>
 
-        <div className="flex items-center gap-3">
-          <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-            {imagePreview ? (
-              <img
-                src={imagePreview}
-                alt="Preview"
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <Camera className="w-6 h-6 text-gray-400" />
-            )}
+            <div className="contact-wrap-content">
+              <form className="contact-form" onSubmit={handleSubmit} noValidate>
+                {/* Name */}
+                <div className="form-grp">
+                  <label className="form-label" htmlFor="name">
+                    Full Name <span className="exclimation">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Dr. John Doe"
+                    value={form.name}
+                    onChange={handleChange}
+                    onKeyDown={handleNameKeyDown}
+                  />
+                  {errors.name && <small style={{ color: "red" }}>{errors.name}</small>}
+                </div>
+
+                {/* Specialization */}
+                <div className="form-grp">
+                  <label className="form-label" htmlFor="specialization">
+                    Specialization <span className="exclimation">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="specialization"
+                    placeholder="e.g. Surgery, Dentistry"
+                    value={form.specialization}
+                    onChange={handleChange}
+                  />
+                  {errors.specialization && (
+                    <small style={{ color: "red" }}>{errors.specialization}</small>
+                  )}
+                </div>
+
+                {/* Phone */}
+                <div className="form-grp">
+                  <label className="form-label" htmlFor="phone">
+                    Phone Number <span className="exclimation">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="+92 300 1234567"
+                    value={form.phone}
+                    onChange={handleChange}
+                  />
+                  {errors.phone && <small style={{ color: "red" }}>{errors.phone}</small>}
+                </div>
+
+                {/* Email */}
+                <div className="form-grp">
+                  <label className="form-label" htmlFor="email">
+                    Email <span className="exclimation">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="vet@example.com"
+                    value={form.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && <small style={{ color: "red" }}>{errors.email}</small>}
+                </div>
+
+                {/* Image Upload */}
+                <div className="form-grp">
+                  <label className="form-label">Profile Image</label>
+                  <div className="flex items-center gap-3">
+                    <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+                      {imagePreview ? (
+                        <img
+                          src={imagePreview}
+                          alt="Preview"
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <Camera className="w-6 h-6 text-gray-400" />
+                      )}
+                    </div>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageChange}
+                    />
+                  </div>
+                  {errors.image && <small style={{ color: "red" }}>{errors.image}</small>}
+                </div>
+
+                <button type="submit" className="btn rounded-btn">
+                  Save & Continue
+                </button>
+              </form>
+            </div>
           </div>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            onChange={handleImageChange}
-          />
-        </div>
 
-        <button
-          type="submit"
-          className="px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700"
-        >
-          Save & Continue
-        </button>
-      </form>
+          {/* Right Column (Optional Image / Info) */}
+          <div className="col-2">
+            <div className="contact-info-wrap">
+              <div className="contact-img">
+                <img src="../public/contact_img.png" alt="Vet Illustration" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

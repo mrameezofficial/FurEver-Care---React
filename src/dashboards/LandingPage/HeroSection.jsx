@@ -12,7 +12,7 @@ export default function HeroSection9() {
 
   // 👇 Har role ka unique path
   const roles = [
-    { id: "owner", label: "Pet Owner", path: "/pet-owner" },
+    { id: "owner", label: "Pet Owner", path: "/pet-form" },
     { id: "vet", label: "Veterinarian", path: "/vet-form" },
     { id: "shelter", label: "Animal Shelter / Rescue Volunteer", path: "/shelter" },
   ];

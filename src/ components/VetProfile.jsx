@@ -130,4 +130,5 @@ export default function VetProfilePage() {
       </div>
     </div>
   );
+  );
 }

@@ -538,14 +538,6 @@ h4.fw-title {
     padding-top: 20px;
 }
 
-.main-hd {
-    display: flex;
-    max-width: 1200px;
-    padding: 80px 20px;
-    gap: 50px;
-    margin: 0 auto;
-    flex-direction: column;
-}
 
 }
 
