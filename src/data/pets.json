@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "name": "Mittens",
+    "name": "Whiskers",
     "age": "1 year",
     "breed": "Persian Cat",
     "type": "Cat",
@@ -25,5 +25,14 @@
     "type": "Rabbit",
     "image": "src/assets/pets/Thumper.jpg",
     "description": "A cute bunny with lots of energy."
+  },
+  {
+    "id": 4,
+    "name": "Max",
+    "age": "3 years",
+    "breed": "Beagle",
+    "type": "dog",
+    "description": "Loyal and smart, loves outdoor walks.",
+    "image": "https://placedog.net/300/200?id=2"
   }
 ]

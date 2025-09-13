@@ -1,18 +1,18 @@
 import React from 'react'
 import Hero from '../../ components/Hero'
-import ShelterHome from '../../ components/ShelterHomeComp'
+import VetProfile from '../../ components/VetProfile'
 
-const ShelterHomeComp = () => {
+const VetProfilePage = () => {
   return (
     <div>
-        <Hero pageTitle="Animal Shelter" />
+      <Hero pageTitle="Vet Profile" />
       <section className="pet-owner-section">
         <div className="container pet-owner-row">
-          <ShelterHome/>
+          <VetProfile />
         </div>
       </section>
     </div>
   )
 }
 
-export default ShelterHomeComp
+export default VetProfilePage

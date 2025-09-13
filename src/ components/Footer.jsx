@@ -1,11 +1,24 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <footer className="main-ftr">
 
-export default Footer
+      {/* Copyright */}
+      <div className="copyright-area">
+        <div className="Copyright-container">
+          <div className="copyright-area-rows">
+            <div className="col-8">
+              <div className="copyright-text">
+                <p>Copyright © 2022 FurEver Care. All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
