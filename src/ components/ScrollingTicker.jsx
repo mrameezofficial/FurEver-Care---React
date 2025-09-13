@@ -28,7 +28,7 @@ export default function ScrollingTicker({ updates = [], speed = 15 }) {
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-        <strong style={{ flex: "0 0 auto ", flexDirection: "row", display: "flex", alignItems:"center", gap:15 }}>Live </strong>
+        <strong style={{ flex: "0 0 auto ", flexDirection: "row", display: "flex", alignItems:"center", gap:15 }}> Live <VisitorCounter/> </strong>
 
         <div style={{ flex: 1, overflow: "hidden" }}>
           <div
