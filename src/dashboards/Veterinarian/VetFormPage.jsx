@@ -5,7 +5,7 @@ import VetForm from '../../ components/VetForm'
 const VetFormPage = () => {
   return (
     <div>
-      <Hero pageTitle="Vet Profile" />
+      <Hero pageTitle="Veterinarian Form" />
       <section className="pet-owner-section">
         <div className="container pet-owner-row">
           <VetForm/>

@@ -465,6 +465,7 @@ body{
     padding: 10px;
     border-radius: 10px;
     border-color: #eee;
+    min-width: 200px;
 }
 
 .main-nav {
