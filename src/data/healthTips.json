@@ -10,7 +10,7 @@
       "title": "Weight Management",
       "type": "audio",
       "description": "Tips on maintaining a healthy weight for your dog.",
-      "url": "https://www.youtube.com/embed/6b0U3P4MfFE?si=2vKAGYhlEi9N6f_D"
+      "url": "http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3"
     }
   ],
   "cats": [
@@ -24,7 +24,7 @@
       "title": "Common Conditions",
       "type": "audio",
       "description": "Recognize signs of common cat illnesses.",
-      "url": "https://www.youtube.com/embed/csYlqpyZ7kg?si=SZCZyV61I_0zuDZ8"
+      "url": "http://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3"
     }
   ]
 }
