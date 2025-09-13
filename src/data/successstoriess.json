@@ -2,18 +2,19 @@
   {
     "id": 1,
     "title": "Bella's New Home",
-    "image": "src/assets/Bella's New Home.jpg",
+    "image": "/assets/bella.jpg",
     "description": "Bella the cat found her forever home with a loving family."
   },
   {
     "id": 2,
     "title": "Max’s Happy Life",
-    "image": "src/assets/Max-new-home.jpg",
+    "image": "/assets/max.jpg",
     "description": "Max the dog was adopted and now enjoys long walks daily."
   },
   {
-    "name": "Max & The Johnsons",
-    "text": "Max became the family's new best friend and protector.",
-    "image": "https://placedog.net/300/201?id=3"
+    "id": 3,
+    "title": "Max & The Johnsons",
+    "image": "https://placedog.net/300/201?id=3",
+    "description": "Max became the family's new best friend and protector."
   }
 ]

@@ -37,10 +37,10 @@ export default function Header() {
   // Navigation for Pet Owner
   const PetOwnerNav = () => (
     <>
-      <Link to="/pet-owner">Home</Link>
-      <Link to="/about">About Us</Link>
+      <Link to="/owner" className="menu-link">Home</Link>
+      <Link to="/about" className="menu-link">About Us</Link>
       <div className="relative group">
-        <button className="cursor-pointer">Pet Care ▾</button>
+        <button className="cursor-pointer menu-link">Pet Care ▾</button>
         <ul className="absolute hidden group-hover:block bg-white border mt-1 py-2 px-4 shadow-md">
           <li><Link to="/pet-profile">Pet Profile</Link></li>
           <li><Link to="/feeding-guide">Feeding Guide</Link></li>
@@ -49,21 +49,28 @@ export default function Header() {
           <li><Link to="/training-tips">Training Tips</Link></li>
         </ul>
       </div>
-      <Link to="/products">Pet Product Showcase</Link>
-      <Link to="/vet-help">Emergency & Vet Help</Link>
-      <Link to="/feedback">Feedback</Link>
-      <Link to="/contact">Contact Us</Link>
+       <div className="relative group">
+        <Link to="/products" className="cursor-pointer menu-link">Pet Products ▾</Link>
+        <ul className="absolute hidden group-hover:block bg-white border mt-1 py-2 px-4 shadow-md">
+          <li><Link to="/products">All</Link></li>
+          <li><Link to="/products?category=Dog%2FCat%20Food">Dog/Cat Food</Link></li>
+          <li><Link to="/products?category=Toys">Toys</Link></li>
+          <li><Link to="/products?category=Grooming%20Essentials">Grooming Essentials</Link></li>
+          <li><Link to="/products?category=Bedding%20and%20Apparel">Bedding and Apparel</Link></li>
+          <li><Link to="products?category=Health%20Supplements">Health Supplements</Link></li>
+        </ul>
+      </div>
+      <Link to="/vet-help" className="menu-link">Emergency & Vet Help</Link>
+      <Link to="/feedback" className="menu-link">Feedback</Link>
+      <Link to="/contact" className="menu-link">Contact Us</Link>
     </>
   );
 
   // Navigation for Veterinarian
   const VetNav = () => (
     <>
-      <Link to="/vet">Home</Link>
-      <Link to="/vet-form-page">Add Profile</Link>
-      <Link to="/vet-profile-page">My Profile</Link>
-      <Link to="/appointments">Appointments</Link>
-      <Link to="/cases">Case Studies</Link>
+      <Link to="/vet-form">Add Profile</Link>
+      <Link to="/vet">My Profile</Link>
       <Link to="/contact">Contact Us</Link>
     </>
   );
@@ -71,9 +78,8 @@ export default function Header() {
   // Navigation for Shelter
   const ShelterNav = () => (
     <>
-      <Link to="/shelter">Home</Link>
-      <Link to="/shelter-animals">Available Animals</Link>
-      <Link to="/shelter-form">Register Animal</Link>
+      <Link to="/shelter">Available Animals</Link>
+      <Link to="/success-stories">Success Stories</Link>
       <Link to="/events">Adoption Events</Link>
       <Link to="/contact">Contact Us</Link>
     </>

@@ -62,7 +62,7 @@ export default function VetForm() {
 
 
    // All validations passed → navigate
-   navigate("/vet-profile-page", { state: { ...form, image: imagePreview } });
+   navigate("/vet-profile", { state: { ...form, image: imagePreview } });
  };
 
 
