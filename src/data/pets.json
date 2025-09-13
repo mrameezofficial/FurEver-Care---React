@@ -24,7 +24,7 @@
     "breed": "Siamese",
     "type": "cat",
     "description": "Calm and affectionate, enjoys naps.",
-    "image": "https://placekitten.com/400/300"
+    "image": "src/assets/pets/Whiskers.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "breed": "Maine Coon",
     "type": "cat",
     "description": "Gentle giant who loves to cuddle.",
-    "image": "https://placekitten.com/401/300"
+    "image": "src/assets/pets/Luna.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "breed": "Dutch Rabbit",
     "type": "rabbit",
     "description": "Curious and playful, loves carrots.",
-    "image": "https://loremflickr.com/400/300/rabbit?lock=1"
+    "image": "src/assets/pets/Thumper.jpg"
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "breed": "Mini Lop",
     "type": "rabbit",
     "description": "Sweet and gentle, loves being held.",
-    "image": "https://loremflickr.com/400/300/rabbit?lock=2"
+    "image": "src/assets/pets/Coco.jpg"
   }
 ]
