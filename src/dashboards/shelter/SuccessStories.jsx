@@ -1,8 +1,7 @@
 import React from 'react'
 import Hero from '../../ components/Hero'
-import Gallery from '../../ components/Animalgallery'
+import ShelterHome from '../../ components/ShelterHomeComp'
 import SuccessStories from '../../ components/ShltSuccessStories'
-
 
 const ShltSuccessStories = () => {
   return (
@@ -10,7 +9,7 @@ const ShltSuccessStories = () => {
         <Hero pageTitle="Success Stories" />
       <section className="pet-owner-section">
         <div className="container pet-owner-row">
-          <SuccessStories stories={storiesData}  />
+          <SuccessStories/>
         </div>
       </section>
     </div>

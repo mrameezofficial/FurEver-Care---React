@@ -25,6 +25,7 @@ import VetFormPage from "./dashboards/Veterinarian/VetFormPage";
 import Header from "./ components/Header";
 import Gallery from "./dashboards/shelter/Gallery";
 import SuccessStories from "./ components/ShltSuccessStories";
+import ShltSuccessStories from "./dashboards/shelter/SuccessStories";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -111,7 +112,7 @@ const App = () => {
         />
         <Route 
           path="/success-stories" 
-          element={<SuccessStories /> } 
+          element={<ShltSuccessStories /> } 
         />
         <Route 
           path="/contact" 
