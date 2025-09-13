@@ -1,5 +1,5 @@
 import React from "react";
-import eventsData from "../../data/zevents.json"; g
+import eventsData from "../../data/zevents.json"; 
 
 export default function Events() {
   const events = Array.isArray(eventsData) ? eventsData : [];

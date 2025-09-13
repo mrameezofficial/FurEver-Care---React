@@ -1,26 +1,34 @@
 [
   {
     "id": 1,
-    "name": "Alice Johnson",
-    "role": "Shelter Manager",
-    "email": "alice.johnson@animalshelter.org",
-    "phone": "+1 123 456 7890",
-    "image": "https://randomuser.me/api/portraits/women/44.jpg"
+    "name": "Muhammad Zarshan",
+    "role": "Volunteer Coordinator",
+    "email": "mzarshanofficial@gmail.com",
+    "phone": "+92 312-1211211",
+    "image": "https://modernconnective.com/wp-content/uploads/2025/08/muhammad-zarshan-img-1-4.jpg"
   },
   {
     "id": 2,
-    "name": "Bob Smith",
+    "name": "Syeda Ghousia",
     "role": "Veterinarian",
-    "email": "bob.smith@animalshelter.org",
-    "phone": "+1 234 567 8901",
-    "image": "https://randomuser.me/api/portraits/men/46.jpg"
+    "email": "ghousia@gmail.com",
+    "phone": "+92 312-2345673",
+    "image": "src/assets/Team/WhatsApp Image 2025-09-13 at 13.12.43.jpeg"
   },
   {
     "id": 3,
-    "name": "Carol Lee",
+    "name": "Muhammad Rameez",
     "role": "Volunteer Coordinator",
-    "email": "carol.lee@animalshelter.org",
-    "phone": "+1 345 678 9012",
-    "image": "https://randomuser.me/api/portraits/women/47.jpg"
+    "email": "mrameezofficial@gmail.com",
+    "phone": "+92 312-2412566",
+    "image": "https://modernconnective.com/wp-content/uploads/2025/03/Untitled-design-35.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Talha",
+    "role": "Volunteer Coordinator",
+    "email": "talha@gmail.com",
+    "phone": "+92 312-2412566",
+    "image": "src/assets/Team/WhatsApp Image 2025-09-13 at 13.10.26.jpeg"
   }
 ]
