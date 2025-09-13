@@ -41,7 +41,7 @@ export default function VetFormPage() {
     if (!imagePreview) return alert("Please upload a profile image.");
 
     // All validations passed → move to profile page
-    navigate("/vet-profile-page", { state: { ...form, image: imagePreview } });
+    navigate("/vet-profile", { state: { ...form, image: imagePreview } });
   }
 
   return (

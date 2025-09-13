@@ -589,3 +589,27 @@ h4.fw-title {
 padding: 12px;
 }
 
+.shltr-event-hd {
+
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+
+}
+
+.shltr-event-h2 {
+  padding: 8px;
+
+}
+
+.gallery-pet-name{
+
+  font-size: 32px;
+  font-weight: 700;
+
+}
+
+.gallery-main-hl{
+
+  padding-bottom: 12px;
+}

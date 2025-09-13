@@ -583,11 +583,6 @@ body{
     padding-left: 16px;
 }
 
-.topbar {
-    background-color: var(--darkblue);
-    padding: 10px 10px;
-}
-
 .topbar .container {
     display: flex;
 }

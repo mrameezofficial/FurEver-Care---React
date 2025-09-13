@@ -45,7 +45,9 @@ const App = () => {
 
     <div>
     <AuthProvider>
+    {location.pathname !== "/" && <Scrolling/>}
     {location.pathname !== "/" && <Header/>}
+    
       <Routes>
         <Route path="/vet-form" element={<VetFormPage />} />
       <Route path="/vet-profile" element={<VetProfilePage />} />
@@ -115,7 +117,6 @@ const App = () => {
         />
       </Routes>
     {location.pathname !== "/" && <Footer />}
-     <Scrolling />
       
     </AuthProvider>
 
