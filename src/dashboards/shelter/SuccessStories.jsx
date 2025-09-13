@@ -15,3 +15,6 @@ const ShltSuccessStories = () => {
     </div>
   );
 }
+
+
+export default ShltSuccessStories
