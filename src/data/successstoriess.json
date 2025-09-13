@@ -2,37 +2,31 @@
   {
     "id": 1,
     "name": "Buddy",
-    "image": "/images/success/buddy.jpg",
+    "image": "src/assets/pets/buddy.jpg",
     "story": "Buddy, a playful Labrador, found his forever home with the Johnson family. He loves playing fetch with the kids every evening."
   },
   {
     "id": 2,
     "name": "Mittens",
-    "image": "/images/success/mittens.jpg",
+    "image": "src/assets/pets/mittens.jpg",
     "story": "Mittens was a shy kitten rescued from the streets. She is now enjoying cuddles and cozy naps in her new home."
   },
   {
     "id": 3,
     "name": "Thumper",
-    "image": "/images/success/thumper.jpg",
+    "image": "src/assets/pets/thumper.jpg",
     "story": "Thumper, the adorable rabbit, quickly became the star of the Parker family. He hops happily around the garden every morning."
-  },
-  {
-    "id": 4,
-    "name": "Rocky",
-    "image": "/images/success/rocky.jpg",
-    "story": "Rocky, a senior German Shepherd, was adopted by a retired couple who adore him. He now spends his golden years relaxing and being pampered."
   },
   {
     "id": 5,
     "name": "Luna",
-    "image": "/images/success/luna.jpg",
+    "image": "src/assets/pets/luna.jpg",
     "story": "Luna, a gentle white cat, was adopted by a college student. She loves sitting by the window and keeping her human company during study hours."
   },
   {
     "id": 6,
     "name": "Coco",
-    "image": "/images/success/coco.jpg",
+    "image": "src/assets/pets/coco.jpg",
     "story": "Coco, a cheerful parrot, found a loving family who adore his chatter. He now entertains everyone with his funny phrases and whistles."
   }
 ]

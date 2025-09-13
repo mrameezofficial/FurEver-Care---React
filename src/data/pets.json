@@ -6,7 +6,7 @@
     "breed": "Golden Retriever",
     "type": "dog",
     "description": "Friendly and energetic, loves children.",
-    "image": "public/dog-img-2.jpg"
+    "image": "public/dog-img-1.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "breed": "Beagle",
     "type": "dog",
     "description": "Loyal and smart, enjoys outdoor walks.",
-    "image": "https://placedog.net/400/300?id=2"
+    "image": "public/dog-img-2.jpg"
   },
   {
     "id": 3,
