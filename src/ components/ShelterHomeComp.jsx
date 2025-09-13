@@ -18,8 +18,7 @@ function ShelterHome() {
     <>
 
       <main className="max-w-6xl mx-auto px-4 py-8 space-y-12">
-        <Gallery />
-        <SuccessStories stories={storiesData} />
+  
         <Events events={eventsData} />
         <Contact />
       </main>
