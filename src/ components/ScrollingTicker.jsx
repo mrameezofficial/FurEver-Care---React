@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import RealTimeClock from "./clock";
+import VisitorCounter from "./visitorcounter";
 
 export default function ScrollingTicker({
   initialCount = 234,     // starting visitors seed
@@ -116,18 +118,17 @@ export default function ScrollingTicker({
     <div
       ref={containerRef}
       style={{
-        background: "#111",
+        background: "#132b45",
         color: "#fff",
         padding: 8,
-        borderRadius: 6,
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
         gap: 10,
       }}
     >
-      {/* Fixed Left */}
-      <strong style={{ flex: "0 0 auto" }}>Live</strong>
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <strong style={{ flex: "0 0 auto ", flexDirection: "row", display: "flex", alignItems:"center", gap:15 }}>Live <VisitorCounter/> </strong>
 
       {/* Scrolling Middle */}
       <div style={{ flex: 1, overflow: "hidden" }}>
@@ -159,17 +160,9 @@ export default function ScrollingTicker({
         </div>
       </div>
 
-      {/* Fixed Right */}
-      <div
-        style={{
-          flex: "0 0 auto",
-          fontWeight: "bold",
-          padding: "4px 10px",
-          borderRadius: 4,
-          background: "rgba(255,255,255,0.1)",
-        }}
-      >
-        👥 Visitors: {visitorCount}
+        <div style={{ flex: "0 0 auto", fontSize: 16 }}>
+          {new Date().toLocaleDateString()}
+        </div>
       </div>
 
       <style>{`

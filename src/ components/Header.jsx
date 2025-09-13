@@ -23,8 +23,6 @@ export default function Header() {
       {/* Topbar */}
       <div className="topbar bg-gray-100 py-2 shadow-sm">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <VisitorCounter />
-          <RealTimeClock />
         </div>
       </div>
 

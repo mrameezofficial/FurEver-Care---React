@@ -9,7 +9,6 @@ export default function VetForm() {
     phone: "",
     email: "",
   });
-  const [errors, setErrors] = useState({});
   const [imagePreview, setImagePreview] = useState(null);
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
@@ -34,12 +33,12 @@ export default function VetForm() {
 
   const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
-  const validate = () => {
-    const newErrors = {};
-    if (!form.name.trim()) newErrors.name = "Name is required.";
-    if (!form.specialization.trim())
-      newErrors.specialization = "Specialization is required.";
-    if (!form.phone.trim()) newErrors.phone = "Phone number is required.";
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!form.name.trim()) return alert("Please enter the vet's name.");
+    if (!form.specialization.trim()) return alert("Please enter specialization.");
+    if (!form.phone.trim()) return alert("Please enter a phone number.");
     if (!form.email.trim() || !isValidEmail(form.email))
       newErrors.email = "Valid email is required.";
     if (!imagePreview) newErrors.image = "Profile image is required.";
