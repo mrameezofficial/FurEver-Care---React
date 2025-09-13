@@ -1,20 +1,38 @@
 [
   {
     "id": 1,
-    "title": "Bella's New Home",
-    "image": "/assets/bella.jpg",
-    "description": "Bella the cat found her forever home with a loving family."
+    "name": "Buddy",
+    "image": "/images/success/buddy.jpg",
+    "story": "Buddy, a playful Labrador, found his forever home with the Johnson family. He loves playing fetch with the kids every evening."
   },
   {
     "id": 2,
-    "title": "Max’s Happy Life",
-    "image": "/assets/max.jpg",
-    "description": "Max the dog was adopted and now enjoys long walks daily."
+    "name": "Mittens",
+    "image": "/images/success/mittens.jpg",
+    "story": "Mittens was a shy kitten rescued from the streets. She is now enjoying cuddles and cozy naps in her new home."
   },
   {
     "id": 3,
-    "title": "Max & The Johnsons",
-    "image": "https://placedog.net/300/201?id=3",
-    "description": "Max became the family's new best friend and protector."
+    "name": "Thumper",
+    "image": "/images/success/thumper.jpg",
+    "story": "Thumper, the adorable rabbit, quickly became the star of the Parker family. He hops happily around the garden every morning."
+  },
+  {
+    "id": 4,
+    "name": "Rocky",
+    "image": "/images/success/rocky.jpg",
+    "story": "Rocky, a senior German Shepherd, was adopted by a retired couple who adore him. He now spends his golden years relaxing and being pampered."
+  },
+  {
+    "id": 5,
+    "name": "Luna",
+    "image": "/images/success/luna.jpg",
+    "story": "Luna, a gentle white cat, was adopted by a college student. She loves sitting by the window and keeping her human company during study hours."
+  },
+  {
+    "id": 6,
+    "name": "Coco",
+    "image": "/images/success/coco.jpg",
+    "story": "Coco, a cheerful parrot, found a loving family who adore his chatter. He now entertains everyone with his funny phrases and whistles."
   }
 ]
