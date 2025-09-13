@@ -29,7 +29,7 @@ export default function Header() {
     localStorage.setItem("category", newRole);
 
     // redirect to correct dashboard
-    if (newRole === "owner") navigate("/pet-owner");
+    if (newRole === "owner") navigate("/owner");
     if (newRole === "vet") navigate("/vet");
     if (newRole === "shelter") navigate("/shelter");
   };
