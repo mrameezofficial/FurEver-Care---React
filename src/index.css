@@ -468,6 +468,36 @@ body{
     min-width: 200px;
 }
 
+.po-contact-team {
+    background-color: var(--lgorange);
+}
+
+.po-contact-team .team-card{
+    background-color: #fff;
+}
+
+.header-nav > a {
+    position: relative;
+}
+
+.header-nav > a:before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: var(--red);
+    display: block;
+    bottom: -5px;
+    position: absolute;
+    transition: .3s ease all;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-nav > a:hover:before {
+    width: 100%;
+    transition: .3s ease all;
+}
+
 .main-nav {
  list-style: none;
  display: flex;
@@ -582,11 +612,6 @@ body{
 
 .list-disc {
     padding-left: 16px;
-}
-
-.topbar {
-    background-color: var(--darkblue);
-    padding: 10px 10px;
 }
 
 .topbar .container {

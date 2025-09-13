@@ -1,22 +1,19 @@
-import React from "react";
-import PetFilter from "../../dashboards/shelter/PetFilter";
-import Listing from "../../dashboards/shelter/Listing";
+import React from 'react'
+import Hero from '../../ components/Hero'
+import Gallery from '../../ components/Animalgallery'
 
-function Gallery({ pets, filter, setFilter }) {
-  const filteredPets =
-    filter === "all" ? pets : pets.filter(pet => pet.type === filter);
 
+const animalGallery = () => {
   return (
-    <section>
-      <h2 className="text-3xl font-bold mb-4 text-gray-800 shltr-hd">Adoptable Pets</h2>
-      <PetFilter setFilter={setFilter} />
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredPets.map(pet => (
-          <Listing key={pet.id} pet={pet} />
-        ))}
-      </div>
-    </section>
-  );
+    <div>
+        <Hero pageTitle="Gallery" />
+      <section className="pet-owner-section">
+        <div className="container pet-owner-row">
+          <Gallery/>
+        </div>
+      </section>
+    </div>
+  )
 }
 
-export default Gallery;
+export default animalGallery

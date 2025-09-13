@@ -9,8 +9,7 @@ export default function Scrolling() {
   ];
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1 style={{ marginBottom: 12 }}>Scrolling Page</h1>
+    <div >
       <ScrollingTicker updates={updates} speed={20} />
     </div>
   );

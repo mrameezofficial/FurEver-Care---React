@@ -4,35 +4,53 @@
     "name": "Buddy",
     "age": "2 years",
     "breed": "Golden Retriever",
-    "type": "Dog",
-    "image": "src/assets/pets/Buddy.jpg",
-    "description": "A friendly and playful dog who loves kids."
+    "type": "dog",
+    "description": "Friendly and energetic, loves children.",
+    "image": "https://placedog.net/400/300?id=1"
   },
   {
     "id": 2,
-    "name": "Whiskers",
-    "age": "1 year",
-    "breed": "Persian Cat",
-    "type": "Cat",
-    "image": "src/assets/pets/Mittens.jpg",
-    "description": "A calm cat who enjoys cuddles."
-  },
-  {
-    "id": 3,
-    "name": "Thumper",
-    "age": "6 months",
-    "breed": "Dutch Rabbit",
-    "type": "Rabbit",
-    "image": "src/assets/pets/Thumper.jpg",
-    "description": "A cute bunny with lots of energy."
-  },
-  {
-    "id": 4,
     "name": "Max",
     "age": "3 years",
     "breed": "Beagle",
     "type": "dog",
-    "description": "Loyal and smart, loves outdoor walks.",
-    "image": "https://placedog.net/300/200?id=2"
+    "description": "Loyal and smart, enjoys outdoor walks.",
+    "image": "https://placedog.net/400/300?id=2"
+  },
+  {
+    "id": 3,
+    "name": "Whiskers",
+    "age": "1 year",
+    "breed": "Siamese",
+    "type": "cat",
+    "description": "Calm and affectionate, enjoys naps.",
+    "image": "https://placekitten.com/400/300"
+  },
+  {
+    "id": 4,
+    "name": "Luna",
+    "age": "2 years",
+    "breed": "Maine Coon",
+    "type": "cat",
+    "description": "Gentle giant who loves to cuddle.",
+    "image": "https://placekitten.com/401/300"
+  },
+  {
+    "id": 5,
+    "name": "Thumper",
+    "age": "6 months",
+    "breed": "Dutch Rabbit",
+    "type": "rabbit",
+    "description": "Curious and playful, loves carrots.",
+    "image": "https://loremflickr.com/400/300/rabbit?lock=1"
+  },
+  {
+    "id": 6,
+    "name": "Coco",
+    "age": "1 year",
+    "breed": "Mini Lop",
+    "type": "rabbit",
+    "description": "Sweet and gentle, loves being held.",
+    "image": "https://loremflickr.com/400/300/rabbit?lock=2"
   }
 ]

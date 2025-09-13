@@ -23,6 +23,8 @@ import PetOwnerContact from "./dashboards/PetOwner/PetOwnerContact";
 import VetProfilePage from "./dashboards/Veterinarian/VetProfilePage";
 import VetFormPage from "./dashboards/Veterinarian/VetFormPage";
 import Header from "./ components/Header";
+import Gallery from "./dashboards/shelter/Gallery";
+import SuccessStories from "./ components/ShltSuccessStories";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, role }) => {
@@ -45,7 +47,9 @@ const App = () => {
 
     <div>
     <AuthProvider>
+    {location.pathname !== "/" && <Scrolling/>}
     {location.pathname !== "/" && <Header/>}
+    
       <Routes>
         <Route path="/vet-form" element={<VetFormPage />} />
       <Route path="/vet-profile" element={<VetProfilePage />} />
@@ -102,6 +106,14 @@ const App = () => {
           element={<ShelterHome />} 
         />
         <Route 
+          path="/animal-gallery" 
+          element={<Gallery /> } 
+        />
+        <Route 
+          path="/success-stories" 
+          element={<SuccessStories /> } 
+        />
+        <Route 
           path="/contact" 
           element={<PetOwnerContact />}
         />
@@ -115,7 +127,6 @@ const App = () => {
         />
       </Routes>
     {location.pathname !== "/" && <Footer />}
-     <Scrolling />
       
     </AuthProvider>
 

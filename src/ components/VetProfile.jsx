@@ -6,16 +6,19 @@ export default function VetProfilePage() {
   const { state: profile } = useLocation();
   const navigate = useNavigate();
 
-  // ✅ Default Dummy Data (when no form submission)
-  const dummyProfile = {
-    name: "Dr. Sarah Johnson",
-    specialization: "Veterinary Surgeon",
-    phone: "+92 300 1234567",
-    email: "sarah.johnson@vetclinic.com",
-    image: null, // no image so fallback Camera icon shows
-  };
-
-  const activeProfile = profile || dummyProfile;
+  if (!profile) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+        <p className="text-gray-500 text-lg">No profile data available.</p>
+        <button
+          onClick={() => navigate("/vet-form")}
+          className="mt-4 px-6 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-orange-500 text-white font-medium shadow-md hover:opacity-90 transition"
+        >
+          Go Back
+        </button>
+      </div>
+    );
+  }
 
   const appointmentSlots = [
     { time: "09:00 AM", status: "booked", patient: "Bella (Dog)" },
@@ -41,79 +44,91 @@ export default function VetProfilePage() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto p-6 space-y-6">
-      {/* Top bar with name */}
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold">Veterinarian Profile</h2>
-        <span className="font-semibold">{activeProfile.name}</span>
-      </div>
-
-      {/* Profile Card */}
-      <div className="bg-white p-4 rounded-xl shadow flex gap-4">
-        <div className="w-32 h-32 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-          {activeProfile.image ? (
-            <img
-              src={activeProfile.image}
-              alt={activeProfile.name}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <Camera className="w-6 h-6 text-gray-400" />
-          )}
+    <div className="bg-gray-50 p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 vetpro-main">
+        {/* Left: Profile */}
+        <div className="vetpro-proflie">
+          <div className="h-48 w-full object-contain mb-4 vetpro-proflie-pic">
+            {profile.image ? (
+              <img
+                src={profile.image}
+                alt={profile.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Camera className="w-10 h-10 text-gray-400" />
+            )}
+          </div>
+          <h3 className="text-xl font-semibold">
+            {profile.name}
+          </h3>
+          <p className="text-sm text-sky-600">Specialization: {profile.specialization}</p>
+          <p className="text-sm text-gray-500 mt-2">Phone No:{profile.phone}</p>
+          <p className="text-sm text-gray-500">Email:{profile.email}</p>
         </div>
-        <div>
-          <h3 className="text-lg font-semibold">{activeProfile.name}</h3>
-          <p className="text-sm text-gray-600">{activeProfile.specialization}</p>
-          <p className="text-xs text-gray-500">
-            Phone: {activeProfile.phone} | Email: {activeProfile.email}
-          </p>
-        </div>
-      </div>
 
-      {/* Appointment Slots */}
-      <section>
-        <h4 className="font-medium mb-2">Appointment Slots</h4>
-        <ul className="grid grid-cols-2 gap-3">
-          {appointmentSlots.map((s) => (
-            <li
-              key={s.time}
-              className="flex items-center justify-between p-2 border rounded"
-            >
-              <div>
-                <p className="font-medium">{s.time}</p>
-                <p className="text-sm">{s.patient ?? "—"}</p>
-              </div>
-              {s.status === "booked" ? (
-                <span className="text-red-500 flex items-center gap-1">
-                  <XCircle className="w-4 h-4" /> Booked
-                </span>
-              ) : (
-                <span className="text-green-500 flex items-center gap-1">
-                  <CheckCircle className="w-4 h-4" /> Available
-                </span>
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
+        {/* Right: Appointments + Case Studies */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Appointments */}
+          <section className="bg-white rounded-2xl shadow-lg p-6">
+            <h4 className="font-semibold text-lg text-gray-800 mb-4">
+              Appointment Slots
+            </h4>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {appointmentSlots.map((s) => (
+                <li
+                  key={s.time}
+                  className="flex items-center justify-between p-4 bg-gray-50 border rounded-xl hover:shadow-md transition"
+                >
+                  <div>
+                    <p className="font-medium text-gray-800">{s.time}</p>
+                    <p className="text-sm text-gray-500">
+                      {s.patient ?? "—"}
+                    </p>
+                  </div>
+                  {s.status === "booked" ? (
+                    <span className="text-red-500 flex items-center gap-1 font-medium">
+                      <XCircle className="w-4 h-4" /> Booked
+                    </span>
+                  ) : (
+                    <span className="text-green-600 flex items-center gap-1 font-medium">
+                      <CheckCircle className="w-4 h-4" /> Available
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
 
-      {/* Case Studies */}
-      <section>
-        <h4 className="font-medium mb-2 profile-subtitle">Case Studies</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {caseStudies.map((c) => (
-            <div key={c.id} className="p-3 border rounded-lg">
-              <h5 className="font-semibold">{c.title}</h5>
-              <p className="text-sm text-gray-700">{c.summary}</p>
-              <ul className="mt-2 text-xs text-gray-600 space-y-1">
-                {c.keyFindings.map((k, i) => (
-                  <li key={i}>• {k}</li>
-                ))}
-              </ul>
+          {/* Case Studies */}
+          <section className="bg-white rounded-2xl shadow-lg p-6">
+            <h4 className="font-semibold text-lg text-gray-800 mb-4">
+              Case Studies
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {caseStudies.map((c) => (
+                <div
+                  key={c.id}
+                  className="p-5 bg-gray-50 rounded-xl border hover:shadow-md transition"
+                >
+                  <h5 className="font-semibold text-gray-800 text-lg mb-1">
+                    {c.title}
+                  </h5>
+                  <p className="text-sm text-gray-600">{c.summary}</p>
+                  <ul className="mt-3 text-sm text-gray-500 space-y-1">
+                    {c.keyFindings.map((k, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <span className="text-sky-500">•</span> {k}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
+  
 }

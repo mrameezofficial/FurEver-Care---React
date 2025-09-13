@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import petsData from "../../src/data/pets.json";
+
 import eventsData from "../../src/data/zevents.json"
 import storiesData from "../../src/data/successstoriess.json";
 
@@ -18,8 +18,7 @@ function ShelterHome() {
     <>
 
       <main className="max-w-6xl mx-auto px-4 py-8 space-y-12">
-        <Gallery pets={petsData} filter={filter} setFilter={setFilter} />
-        <SuccessStories stories={storiesData} />
+  
         <Events events={eventsData} />
         <Contact />
       </main>
