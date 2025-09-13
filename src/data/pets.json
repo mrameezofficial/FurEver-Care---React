@@ -6,7 +6,7 @@
     "breed": "Golden Retriever",
     "type": "dog",
     "description": "Friendly and energetic, loves children.",
-    "image": "https://placedog.net/400/300?id=1"
+    "image": "public/dog-img-2.jpg"
   },
   {
     "id": 2,

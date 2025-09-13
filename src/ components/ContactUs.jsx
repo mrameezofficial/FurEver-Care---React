@@ -135,7 +135,7 @@ const ContactUs = () => {
                     <div className="col-2">
                         <div className="contact-info-wrap">
                             <div className="contact-img">
-                                <img src="../public/contact_img.png" alt="Contact Illustration" />
+                                <img src="../../public/contact_img.png" alt="Contact Illustration" />
                             </div>
 
               <div>
