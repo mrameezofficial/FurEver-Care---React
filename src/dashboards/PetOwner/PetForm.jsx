@@ -57,7 +57,7 @@ const PetForm = () => {
       });
 
       // ✅ Redirect to /pet-owner
-      navigate("/pet-owner");
+      navigate("/owner");
     }
   };
 
